@@ -25,7 +25,7 @@ namespace Stack{
         public t Top(){
             return _array[_top];
         }
-        }
+    }
 }
 
       
