@@ -1,11 +1,13 @@
-var bubbleSort = require('./bubbleSort');
-var rl = require('readline');
+let bubbleSort = require('./bubbleSort');
+// import bubbleSort from './bubbleSort';
+let rl = require('readline');
+// import rl from 'readline';
 // allow input through console
-var prompt = rl.createInterface(process.stdin,
+let prompt = rl.createInterface(process.stdin,
                                  process.stdout);
 
-var array = [];
-var flag = true;
+let array = [];
+let flag = true;
 console.log('Enter all the values. Press q to stop input');
 
 function readInput() {
