@@ -1,6 +1,7 @@
 
 
 #include <iostream>
+#include <cstring>
 #include "cstack.h"
 using namespace std;
 int main()
