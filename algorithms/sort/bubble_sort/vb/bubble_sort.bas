@@ -1,5 +1,5 @@
 Option Explicit
-
+'VB6 Specific
 Private Sub bubble_sort()
 Dim i As Integer
 Dim j As Integer
