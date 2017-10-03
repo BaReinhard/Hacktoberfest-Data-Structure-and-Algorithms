@@ -1,23 +1,22 @@
 
 #ifndef CSTACK_H
 #define CSTACK_H
-#include <iostream>
-using namespace std;
+
+#include "celement.h"
 
 // Header File
 class CStack
 {
-
   public:
+    CStack(const CStack&) = delete;             //Forbid usage of Copy Constructor because we use raw pointers
+    CStack& operator=(const CStack&) = delete;  //Forbid usage of copy assignment for the same reason
     CStack();
     char Top();
     void Pop();
     void Push(char);
     bool IsEmpty();
-    bool IsFull();
 
   private:
-    int _top;
-    char _data[21];
+    CElement *_top;
 };
 #endif
