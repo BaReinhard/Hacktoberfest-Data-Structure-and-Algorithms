@@ -22,13 +22,17 @@ class InsertionSort {
     }
 
     public static void main(String[] args) {
-        int[] array = new array[10];
+        int[] array = new int[10];
 
 
-        for (int i = 10; i >= 0 ; i++) {
+        for (int i = 10; i > 0 ; i--) {
             array[10 - i] = i;
         }
 
         int[] sortedArray = insertionSort(array);
+
+        for (int i: sortedArray) {
+            System.out.print(i + " ");
+        }
     }
 }
