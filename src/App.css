@@ -135,7 +135,7 @@ pre {
 }
 .directory-choice {
     white-space: nowrap;
-    text-overflow: ;
+    text-overflow: ellipsis;
     background: radial-gradient(circle, #f66364 0, #d45558 180%);
     color: white;
     width: 48%;
