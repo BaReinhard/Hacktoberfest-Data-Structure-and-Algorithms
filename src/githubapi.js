@@ -131,4 +131,4 @@ export const ROOT_DIR = [
 export const ROOT_API_PATH =
     'https://api.github.com/repos/bareinhard/hacktoberfest-data-structure-and-algorithms/contents';
 export const GET_RECURSIVE_TREE_PATH =
-    'https://api.github.com/repos/bareinhard/hacktoberfest-mathematics/git/trees/998b8dece305a8eede1a66cb1b007f7aee393521?recursive=1';
+    'https://api.github.com/repos/bareinhard/hacktoberfest-data-structure-and-algorithms/git/trees/';
