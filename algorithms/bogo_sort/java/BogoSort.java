@@ -20,10 +20,9 @@ public class BogoSort {
 		return nums;
 	}
 	
-	public static boolean isSorted(List<Integer> nums) {
-		Integer[] x = nums.toArray(new Integer[nums.size()]);
-		for (int i = 0; i < x.length - 1; i++) {
-			if (x[i] > x[i + 1]) {
+	public static boolean isSorted(List<Integer> x) {
+		for (int i = 0; i < x.size() - 1; i++) {
+			if (x.get(i) > x.get(i + 1)) {
 				return false;
 			}
 		}
