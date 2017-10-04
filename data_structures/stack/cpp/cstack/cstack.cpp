@@ -9,6 +9,14 @@ CStack::CStack()
     // Init top to be nullptr, stack is empty
     _top = nullptr;
 };
+// Destructor to free memory
+CStack::~CStack()
+{
+    while (!IsEmpty())
+    {
+        Pop ();
+    }
+}
 // Removes value from the top of the stack
 void CStack::Pop()
 {
