@@ -35,3 +35,5 @@ ex: /algorithms/bubble_sort/cpp/bubble_sort.cpp
 2. Make your changes on your forked repo
 3. Make Pull Request to master
 
+#### Credits 
+Logo created with: http://logomakr.com
