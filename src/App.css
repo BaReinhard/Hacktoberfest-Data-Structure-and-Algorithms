@@ -16,6 +16,9 @@
     color: #ff9465;
 }
 
+.sanitized div {
+    white-space: wrap;
+}
 .App-title {
     font-size: 1.5em;
 }
@@ -71,7 +74,8 @@
     width: 100%;
     box-sizing: border-box;
 }
-pre {
+pre,
+.sanitized {
     white-space: pre-wrap;
     background-color: #ddd;
     margin-left: 15px;
@@ -175,13 +179,15 @@ pre {
         width: 95%;
         box-sizing: border-box;
     }
-    pre {
+    pre,
+    .sanitized {
         background-color: #ddd;
         margin-left: 0px;
         margin-right: 0px;
         box-sizing: border-box;
         padding: 30px;
     }
+
     .directory-button {
         background: radial-gradient(circle, #3241a6 0, #171f4e 180%);
         color: white;

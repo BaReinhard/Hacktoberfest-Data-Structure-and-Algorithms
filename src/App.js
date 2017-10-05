@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
+import sanitizeHTML from 'sanitize-html';
 import './App.css';
 import http from 'axios';
+import showdown from 'showdown';
 import '../node_modules/github-fork-ribbon-css/gh-fork-ribbon.css';
-
+const converter = new showdown.Converter();
 class App extends Component {
     constructor() {
         super();
@@ -117,6 +119,9 @@ class App extends Component {
             codeContent: Object.assign({}, this.state.codeContent, { [finalPath]: atob(code.content) }),
         });
     };
+    setMarkDown = html => {
+        return { __html: converter.makeHtml(sanitizeHTML(html)) };
+    };
     render() {
         return (
             <div className="App">
@@ -154,89 +159,160 @@ class App extends Component {
                     )}
                 </div>
                 <div className="content-container">
-                    {this.state.rootTree.map(dir => (
-                        <div key={dir.path} className="content">
-                            <h3 className="content-header">{this.sanitizeWord(dir.name)}</h3>
-                            {dir.tree.map(subdir => {
-                                let subs = [];
+                    {this.state.rootTree.map(
+                        dir =>
+                            !dir.name.includes('description') ? (
+                                <div key={dir.path} className="content">
+                                    <h3 className="content-header">{this.sanitizeWord(dir.name)}</h3>
+                                    {dir.tree.map(subdir => {
+                                        let subs = [];
 
-                                return !subdir.path.includes('/') ? (
-                                    <div key={`${dir.path}/toplevel${subdir.path}`} className="sub-content">
-                                        <h4 className="subcontent-header" id={subdir.path}>
-                                            {this.sanitizeWord(subdir.path)}
-                                        </h4>
-                                        {dir.tree.map(subsubdir => {
-                                            let subName = subsubdir.path.split('/');
+                                        return !subdir.path.includes('/') ? (
+                                            <div key={`${dir.path}/toplevel${subdir.path}`} className="sub-content">
+                                                <h4 className="subcontent-header" id={subdir.path}>
+                                                    {this.sanitizeWord(subdir.path)}
+                                                </h4>
+                                                {dir.tree.map(subsubdir => {
+                                                    let subName = subsubdir.path.split('/');
 
-                                            if (
-                                                subsubdir.path.includes('/') &&
-                                                subName[0] === subdir.path &&
-                                                !subs.includes(subName[1])
-                                            ) {
-                                                console.log(subName, !subs.includes(subName), subs);
-                                                subs.push(subName[1]);
-                                                return (
-                                                    <div
-                                                        className="language-sub-content"
-                                                        key={`${dir.path}/${subName[1]}`}
-                                                    >
-                                                        <h5 className="language-subcontent-header">
-                                                            Language:{' '}
-                                                            <span className="language">
-                                                                {this.sanitizeWord(subsubdir.path.split('/')[1])}
-                                                            </span>
-                                                        </h5>
-                                                        {dir.tree.map(
-                                                            files =>
-                                                                files.path.includes(subName[0] + '/' + subName[1]) &&
-                                                                files.path.includes('.') ? (
-                                                                    <div key={`${dir.path}/${files.path}`}>
-                                                                        <h4 className="file-name-header">
-                                                                            File Name:{' '}
-                                                                            <span className="file-name">
-                                                                                {
-                                                                                    files.path.split('/')[
-                                                                                        files.path.split('/').length - 1
-                                                                                    ]
-                                                                                }
-                                                                            </span>
-                                                                        </h4>
-                                                                        <button
-                                                                            className="view-code-button"
-                                                                            id={`${dir.path}/${files.path}`}
-                                                                            onClick={this.loadCode}
-                                                                        >
-                                                                            View Code
-                                                                        </button>
+                                                    if (
+                                                        subsubdir.path.includes('/') &&
+                                                        subName[0] === subdir.path &&
+                                                        !subs.includes(subName[1])
+                                                    ) {
+                                                        console.log(subName, !subs.includes(subName), subs);
+                                                        subs.push(subName[1]);
+                                                        return (
+                                                            <div
+                                                                className="language-sub-content"
+                                                                key={`${dir.path}/${subName[1]}`}
+                                                            >
+                                                                <h5 className="language-subcontent-header">
+                                                                    Language:{' '}
+                                                                    <span className="language">
+                                                                        {this.sanitizeWord(
+                                                                            subsubdir.path.split('/')[1],
+                                                                        )}
+                                                                    </span>
+                                                                </h5>
+                                                                {dir.tree.map(
+                                                                    files =>
+                                                                        files.path.includes(
+                                                                            subName[0] + '/' + subName[1],
+                                                                        ) && files.path.includes('.') ? (
+                                                                            <div key={`${dir.path}/${files.path}`}>
+                                                                                <h4 className="file-name-header">
+                                                                                    File Name:{' '}
+                                                                                    <span className="file-name">
+                                                                                        {
+                                                                                            files.path.split('/')[
+                                                                                                files.path.split('/')
+                                                                                                    .length - 1
+                                                                                            ]
+                                                                                        }
+                                                                                    </span>
+                                                                                </h4>
+                                                                                <button
+                                                                                    className="view-code-button"
+                                                                                    id={`${dir.path}/${files.path}`}
+                                                                                    onClick={this.loadCode}
+                                                                                >
+                                                                                    View Code
+                                                                                </button>
+                                                                                <div
+                                                                                    style={{
+                                                                                        position: 'relative',
+                                                                                        whiteSpace: 'nowrap',
+                                                                                        textAlign: 'left',
+                                                                                    }}
+                                                                                >
+                                                                                    <pre>
+                                                                                        {
+                                                                                            this.state.codeContent[
+                                                                                                files.path
+                                                                                            ]
+                                                                                        }
+                                                                                    </pre>
+                                                                                </div>
+                                                                            </div>
+                                                                        ) : (
+                                                                            ''
+                                                                        ),
+                                                                )}
+                                                            </div>
+                                                        );
+                                                    } else {
+                                                        return '';
+                                                    }
+                                                })}
+                                            </div>
+                                        ) : (
+                                            ''
+                                        );
+                                    })}
+                                </div>
+                            ) : (
+                                // Descriptions
+                                <div key={dir.path} className="content">
+                                    <h3 className="content-header">{this.sanitizeWord(dir.name)}</h3>
+                                    {dir.tree.map(subdir => {
+                                        let subs = [];
+
+                                        return !subdir.path.includes('/') ? (
+                                            <div key={`${dir.path}/toplevel${subdir.path}`} className="sub-content">
+                                                <h4 className="subcontent-header" id={subdir.path}>
+                                                    {this.sanitizeWord(subdir.path.toLowerCase()).replace('.md', '')}
+                                                </h4>
+
+                                                {dir.tree.map(
+                                                    files =>
+                                                        files.path.includes(subdir.path) ? (
+                                                            <div key={`${dir.path}/${files.path}`}>
+                                                                <h4 className="file-name-header">
+                                                                    File Name:{' '}
+                                                                    <span className="file-name">
+                                                                        {
+                                                                            files.path.split('/')[
+                                                                                files.path.split('/').length - 1
+                                                                            ]
+                                                                        }
+                                                                    </span>
+                                                                </h4>
+                                                                <button
+                                                                    className="view-code-button"
+                                                                    id={`${dir.path}/${files.path}`}
+                                                                    onClick={this.loadCode}
+                                                                >
+                                                                    View Code
+                                                                </button>
+                                                                <div
+                                                                    style={{
+                                                                        position: 'relative',
+                                                                        whiteSpace: 'nowrap',
+                                                                        textAlign: 'left',
+                                                                    }}
+                                                                >
+                                                                    <div className="sanitized">
                                                                         <div
-                                                                            style={{
-                                                                                position: 'relative',
-                                                                                whiteSpace: 'nowrap',
-                                                                                textAlign: 'left',
-                                                                            }}
-                                                                        >
-                                                                            <pre>
-                                                                                {this.state.codeContent[files.path]}
-                                                                            </pre>
-                                                                        </div>
+                                                                            dangerouslySetInnerHTML={this.setMarkDown(
+                                                                                this.state.codeContent[files.path],
+                                                                            )}
+                                                                        />
                                                                     </div>
-                                                                ) : (
-                                                                    ''
-                                                                ),
-                                                        )}
-                                                    </div>
-                                                );
-                                            } else {
-                                                return '';
-                                            }
-                                        })}
-                                    </div>
-                                ) : (
-                                    ''
-                                );
-                            })}
-                        </div>
-                    ))}
+                                                                </div>
+                                                            </div>
+                                                        ) : (
+                                                            ''
+                                                        ),
+                                                )}
+                                            </div>
+                                        ) : (
+                                            ''
+                                        );
+                                    })}
+                                </div>
+                            ),
+                    )}
                 </div>
 
                 {/* Display Code*/}
