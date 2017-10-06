@@ -27,22 +27,22 @@ Here comes the **Binary Search**,
 
 Pseudocode for Binary Searching:
 
-`Given an array A of n elements with values or records A0, A1, ..., An−1, sorted such that A0 ≤ A1 ≤ ... ≤ An−1, and target value T, the following subroutine uses binary search to find the index of T in A.[7]
+Given an array A of n elements with values or records A0, A1, ..., An−1, sorted such that A0 ≤ A1 ≤ ... ≤ An−1, and target value T, the following subroutine uses binary search to find the index of T in A.[7]
 1. Set L to 0 and R to n − 1.
 2. If L > R, the search terminates as unsuccessful.
 3. Set m (the position of the middle element) to the floor (the largest previous integer) of (L + R) / 2.
 4. If Am < T, set L to m + 1 and go to step 2.
 5. If Am > T, set R to m − 1 and go to step 2.
-6. Now Am = T, the search is done; return m.`
+6. Now Am = T, the search is done; return m.
 
 ## Pros
-* the Time Complexity is O(log(n))
+* The Time Complexity is O(log(n))
 * Binary search adds a small amount of complexity for large performance gains.
 * Simple to write.
 * One of the fastest way to find elements in a list.
 
 ## Cons
-* the list must be sorted, which is,
+* The list must be sorted, which is,
 * The complexity can increase when the collection is not stored in a simple structure, such as a list.
 * The list has to be sorted.
 * Doesn't help in reducing the time much and adds complexity for small arrays.
