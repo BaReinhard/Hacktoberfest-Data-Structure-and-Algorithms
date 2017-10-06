@@ -2,10 +2,10 @@
 **Binary Serch** is a way of searching for a thing in a list of things. The list should be sorted, that is, it should be in increasing index or the method won't work. First, we go to the middle of the array and see if the element equals to the value we want to find. Then, if our target value is less/greater than the element in the middle, we work on a new list (which starts from the middle and all the way to the left-most/right-most side) and everything on the right/left side. We keep doing this until we find the value we were looking for or if were fluctuating between two elements.
 
 ## Pros
-* it takes too much less time than a reqular sequential search
+* It takes too much less time than a reqular sequential search
 
 ## Cons
-* the list must be sorted
+* The list must be sorted
 
 ## Technical Explanation
 
