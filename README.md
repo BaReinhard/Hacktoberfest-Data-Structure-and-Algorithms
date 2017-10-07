@@ -9,7 +9,7 @@ A repo to contains data structure s and algorithms, regardless of language.
 
 # Contributing to this repo
 **Implementing new File/Directory Structure**
-* Try to keep things as modular as possible, the new file/directory structure should be: 
+* Try to keep things as modular as possible, the new file/directory structure should be:
 ```
 /data_structures/structure/language/file
 ex: /data_structures/char_stack/cpp/cstack.cpp
@@ -35,5 +35,5 @@ ex: /algorithms/bubble_sort/cpp/bubble_sort.cpp
 2. Make your changes on your forked repo
 3. Make Pull Request to master
 
-#### Credits 
+#### Credits
 Logo created with: http://logomakr.com
