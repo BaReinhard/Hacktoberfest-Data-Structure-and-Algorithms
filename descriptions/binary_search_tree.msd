@@ -1,13 +1,13 @@
 
-##ELI5
+## ELI5
 A tree is a container that stores items in sorted order in memory.It's like the inversed version of an actual tree.
 
-###Pros
-*BSTs allow fast lookup, addition and removal of items.
-###Cons
-*Tree gets skewed to one side when we save sorted items.The advantage of fast operations is lost.
+### Pros
+* BSTs allow fast lookup, addition and removal of items.
+### Cons
+* Tree gets skewed to one side when we save sorted items.The advantage of fast operations is lost.
 
-##Technical Explaination
+## Technical Explaination
 Binary Search Tree is a node-based binary tree data structure.
 *NODE: All items are stored in nodes.
 *ROOT: The top node in a tree.
@@ -24,11 +24,11 @@ Storing 2,4,1,10,3 in a BST:
 	3  10
 	  
 	
-###Pros
-*Time Complexity of insertion,deletion and search is O(h). h=height of tree
+### Pros
+* Time Complexity of insertion,deletion and search is O(h). h=height of tree
 i.e. O(log n) which is less than linked list and array.   n=number of nodes
-###Cons
-*For a skewed binary tree time complexity of insertion,deletion and search is O(n).
+### Cons
+* For a skewed binary tree time complexity of insertion,deletion and search is O(n).
 As for a skewed binary tree height h is O(n).
 e.g 2,3,4,5
  2
