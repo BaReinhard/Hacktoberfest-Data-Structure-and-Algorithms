@@ -13,6 +13,6 @@ Deleting/erasing an item simply requires redirecting the pointer of the previous
 The pointer-based nature of list also makes it easier to make greater changes such as reversing the list, as once again no values must be copied to different spots in memory, instead only pointers are reassigned.
 Accessing the value at a given index in the list is expensive, in O(n) time. One must start at a known pointer and increment through the list one node at a time until the desired location is reached. Because lists are not based on arrays, subscripting in the standard O(1) sense cannot be used to access list values.
 ### Pros
-*Adding and removing nodes from the list is cheap O(1)
+* Adding and removing nodes from the list is cheap O(1)
 ### Cons
- *Accessing values in the list is expensive O(n)
+* Accessing values in the list is expensive O(n)
