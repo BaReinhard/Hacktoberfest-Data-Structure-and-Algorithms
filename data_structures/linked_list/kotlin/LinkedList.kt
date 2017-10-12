@@ -44,8 +44,8 @@ internal class linkedList {
     }
 
     /*  Function to insert an element at begining  */
-    fun insertAtStart(`val`: Int) {
-        val nptr = Node(`val`, null)
+    fun insertAtStart(value: Int) {
+        val nptr = Node(value, null)
         size++
         if (start == null) {
             start = nptr
@@ -57,8 +57,8 @@ internal class linkedList {
     }
 
     /*  Function to insert an element at end  */
-    fun insertAtEnd(`val`: Int) {
-        val nptr = Node(`val`, null)
+    fun insertAtEnd(value: Int) {
+        val nptr = Node(value, null)
         size++
         if (start == null) {
             start = nptr
@@ -70,9 +70,9 @@ internal class linkedList {
     }
 
     /*  Function to insert an element at position  */
-    fun insertAtPos(`val`: Int, pos: Int) {
+    fun insertAtPos(value: Int, pos: Int) {
         var pos = pos
-        val nptr = Node(`val`, null)
+        val nptr = Node(value, null)
         var ptr = start
         pos =- 1
         for (i in 1 until size) {
@@ -145,7 +145,6 @@ internal class linkedList {
 
 /*  Class SinglyLinkedList  */
 object SinglyLinkedList {
-    @JvmStatic
     fun main(args: Array<String>) {
         val scan = Scanner(System.`in`)
         /* Creating object of class linkedList */
