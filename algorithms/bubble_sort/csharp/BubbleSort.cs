@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 
 
-public class BuubleSort {
+public class BubbleSort {
     private static void Main(string[] args) {
          Console.WriteLine("Input the elements of the array");
             var isNumber = true;
