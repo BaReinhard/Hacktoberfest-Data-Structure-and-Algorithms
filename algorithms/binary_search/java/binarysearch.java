@@ -27,7 +27,7 @@ class BinarySearch
     public static void main(String args[])
     {
         BinarySearch ob = new BinarySearch();
-        int arr[] = {1, 4, 90, 5, 67, 10, 11, 27, 36};
+        int arr[] = {1, 4, 5, 10, 11, 27, 36, 67, 90};
         int n = arr.length;
         int x = 10;
         int result = ob.binarySearch(arr, 0, n - 1, x);
