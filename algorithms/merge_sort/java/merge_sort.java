@@ -4,7 +4,7 @@ class MergeSort
     // Merges two subarrays of arr[].
     // First subarray is arr[l..m]
     // Second subarray is arr[m+1..r]
-    void merge(int arr[], int l, int m, int r)
+    private static void merge(int arr[], int l, int m, int r)
     {
         // Find sizes of two subarrays to be merged
         int n1 = m - l + 1;
@@ -62,7 +62,7 @@ class MergeSort
  
     // Main function that sorts arr[l..r] using
     // merge()
-    void sort(int arr[], int l, int r)
+    private static void sort(int arr[], int l, int r)
     {
         if (l < r)
         {
@@ -77,9 +77,23 @@ class MergeSort
             merge(arr, l, m, r);
         }
     }
+    
+    //The method exposed externally, deals with input validation
+    //and hides the implementation details
+    public static boolean sort(int[] arr) {
+    	if(arr == null) {
+    		return false;
+    	}
+    	
+    	if(arr.length != 0) {
+    		sort(arr, 0, arr.length - 1);
+    	}
+    	
+    	return true;
+    }
  
     /* A utility function to print array of size n */
-    static void printArray(int arr[])
+    public static void printArray(int arr[])
     {
         int n = arr.length;
         for (int i=0; i<n; ++i)
@@ -95,8 +109,7 @@ class MergeSort
         System.out.println("Given Array");
         printArray(arr);
  
-        MergeSort ob = new MergeSort();
-        ob.sort(arr, 0, arr.length-1);
+        MergeSort.sort(arr);
  
         System.out.println("\nSorted array");
         printArray(arr);
