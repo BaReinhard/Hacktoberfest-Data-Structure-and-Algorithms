@@ -1,30 +1,30 @@
-import javax.sound.midi.SysexMessage;
+import java.util.Arrays;
 
-class LongestCommonSubString {
+class StringManager {
 
-    public static int findLongestCommonSubString(char[] x, char[] y, int m, int n){
-
-        int LCSMatrix[][] = new int[m+1][n+1];
-        int result = 0;
+    public static String findLongestCommonSubString(String str1, String str2) throws NullPointerException {
+    	
+    	char[] x = str1.toCharArray();
+    	char[] y = str2.toCharArray();
+    	
+        int LCSMatrix[][] = new int[x.length+1][y.length+1];
+        int length = 0;
         int indexOfLastCharX = 0;
-        int indexOfLastCharY = 0;
 
-        for(int i = 0; i < m; i++){
-            for(int j = 0; j < n; j++){
+        for(int i = 0; i < x.length; i++){
+            for(int j = 0; j < y.length; j++){
                 if(x[i] == y[j]){
                     if(i == 0 || j == 0){
                         LCSMatrix[i][j] = 1;
-                        if(LCSMatrix[i][j] > result){
-                            result = LCSMatrix[i][j];
+                        if(LCSMatrix[i][j] > length){
+                        	length = LCSMatrix[i][j];
                             indexOfLastCharX = i;
-                            indexOfLastCharY = j;
                         }
                     } else {
                         LCSMatrix[i][j] = LCSMatrix[i-1][j-1] + 1;
-                        if(LCSMatrix[i][j] > result){
-                            result = LCSMatrix[i][j];
+                        if(LCSMatrix[i][j] > length){
+                        	length = LCSMatrix[i][j];
                             indexOfLastCharX = i;
-                            indexOfLastCharY = j;
                         }
                     }
                 } else {
@@ -32,21 +32,17 @@ class LongestCommonSubString {
                 }
             }
         }
-        printCommonSubString(x, result, indexOfLastCharX);
-        return result;
-    }
-
-    private static void printCommonSubString(char[] x, int length, int i){
-        for(int startingPoint = i - length + 1; startingPoint <= i; startingPoint++){
-            System.out.print(x[startingPoint]);
-        }
-        System.out.print("\n");
+        
+        int indexOfFirstCharX = indexOfLastCharX - length + 1;
+        return new String(Arrays.copyOfRange(x, indexOfFirstCharX, indexOfLastCharX + 1));
     }
 
     public static void main(String[] args){
-        char[] test1 = "immeasurable".toCharArray();
-        char[] test2 = "measure".toCharArray();
-        System.out.print(findLongestCommonSubString(test1, test2, test1.length, test2.length));
+    	String test1 = "immeasurable";
+    	String test2 = "measure";
+    	
+    	String result = findLongestCommonSubString(test1, test2);
+        System.out.println(result);
     }
 
 }
