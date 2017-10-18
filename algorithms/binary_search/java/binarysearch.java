@@ -3,6 +3,10 @@ class BinarySearch
 {
     // Returns index of x if it is present in arr[l..r], else return -1
     int binarySearch(int ar[], int l, int r, int x){
+		if(ar.length == 0) {
+    		return -1;
+    	}
+		
         if (r >= l){
             int mid = l + (r - l) / 2;
             // If the search is present at the mid postion
@@ -23,7 +27,7 @@ class BinarySearch
     public static void main(String args[])
     {
         BinarySearch ob = new BinarySearch();
-        int arr[] = {1, 4, 90, 5, 67, 10, 11, 27, 36};
+        int arr[] = {1, 4, 5, 10, 11, 27, 36, 67, 90};
         int n = arr.length;
         int x = 10;
         int result = ob.binarySearch(arr, 0, n - 1, x);
