@@ -1,36 +1,41 @@
 // Java implementation of Binary Search
-class BinarySearch
+public class BinarySearch
 {
     // Returns index of x if it is present in arr[l..r], else return -1
-    int binarySearch(int ar[], int l, int r, int x){
-		if(ar.length == 0) {
-    		return -1;
-    	}
-		
-        if (r >= l){
-            int mid = l + (r - l) / 2;
+    int binarySearch(int array[], int left, int right, int x){
+        if(array.length == 0) {
+            return -1;
+        }
+
+        if (right >= left){
+            int mid = left + (right - left) / 2;
             // If the search is present at the mid postion
-            if (ar[mid] == x){
-               return mid;
+            if (array[mid] == x){
+                return mid;
             }
             // If element is smaller than mid, then it can only be in left subarray
-            if (ar[mid] > x){
-               return binarySearch(ar, l, mid - 1, x);
+            if (array[mid] > x){
+                return binarySearch(array, left, mid - 1, x);
             }
             // Else the element can only be present in right subarray
-            return binarySearch(ar, mid + 1, r, x);
+            return binarySearch(array, mid + 1, right, x);
         }
         // We reach here when element is not present in array
         return -1;
     }
+
+   int search(int [] array, int x) {
+        return binarySearch(array, 0, array.length -1, x);
+
+   }
     // Main method for testing
-    public static void main(String args[])
+    public static void main(String[] args)
     {
         BinarySearch ob = new BinarySearch();
-        int arr[] = {1, 4, 5, 10, 11, 27, 36, 67, 90};
-        int n = arr.length;
+        int array[] = {1, 4, 5, 10, 11, 27, 36, 67, 90};
         int x = 10;
-        int result = ob.binarySearch(arr, 0, n - 1, x);
+        int result = ob.search(array,  x);
+
         if (result == -1){
             System.out.println("Element not present");
         }
