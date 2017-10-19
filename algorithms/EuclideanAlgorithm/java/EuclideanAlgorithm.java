@@ -8,6 +8,9 @@ public class EuclideanAlgorithm{
 		if(b==0){
 			return a;
 		}
-		return gcd(b,a%b);
+		else{
+			return gcd(b,a%b);
+		}
 	}
+	
 }
