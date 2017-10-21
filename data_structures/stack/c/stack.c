@@ -1,5 +1,6 @@
 #include<stdio.h>
 #define MAX_SIZE 10
+//Stack max size is 10. After that overflow will occour.
 
 void display();
 void push(int);
@@ -67,6 +68,7 @@ void pop()
 	if(top==-1)
 	{
            printf("\nUnderflow\n\n");
+		//If there is no element in stack & you tried pop then Underflow will occour.
 	}
 	else
 	{
