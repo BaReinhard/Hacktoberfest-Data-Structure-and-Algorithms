@@ -7,15 +7,17 @@ def bucketsort( A ):
     x = re_hashing( i, code )
     buck = buckets[x]
     buck.append( i )
- 
-  # Sort each bucket: O(n).
-  # I mentioned above that the worst case for bucket sort is counting
-  # sort. That's because in the worst case, bucket sort may end up
-  # with one bucket per key. In such case, sorting each bucket would
-  # take 1^2 = O(1). Even after allowing for some probabilistic
-  # variance, to sort each bucket would still take 2-1/n, which is
-  # still a constant. Hence, sorting all the buckets takes O(n).
- 
+    
+ """
+   Sort each bucket: O(n).
+   I mentioned above that the worst case for bucket sort is counting
+   sort. That's because in the worst case, bucket sort may end up
+   with one bucket per key. In such case, sorting each bucket would
+   take 1^2 = O(1). Even after allowing for some probabilistic
+   variance, to sort each bucket would still take 2-1/n, which is
+   still a constant. Hence, sorting all the buckets takes O(n).
+ """
+
   for bucket in buckets:
     insertionsort( bucket )
  
