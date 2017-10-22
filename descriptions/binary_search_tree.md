@@ -6,7 +6,7 @@ A tree is a container that stores items in sorted order in memory.It's like the 
 ### Cons
 * Tree gets skewed to one side when we save sorted items.The advantage of fast operations is lost.
 
-## Technical Explaination
+## Technical Explanation
 Binary Search Tree is a node-based binary tree data structure.
 * **NODE:** All items are stored in nodes.
 * **ROOT:** The top node in a tree.
