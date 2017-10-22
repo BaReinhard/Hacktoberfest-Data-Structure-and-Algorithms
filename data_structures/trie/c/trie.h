@@ -25,6 +25,5 @@ void TrieDrop(Trie t);
 
 
 void TrieShow(Trie t);
-void TriePrint(Trie t);
 
 #endif
