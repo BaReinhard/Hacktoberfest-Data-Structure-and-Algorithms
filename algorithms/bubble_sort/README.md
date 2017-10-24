@@ -6,14 +6,16 @@ This folder contains examples of the bubble sort algorithm in the following prog
 * C
 * C++
 * Crystal
+* C#
 * Elixir
-* GO
+* Go
 * Haskell
 * Java
 * JavaScript
 * Kotlin
 * Objective-C
+* Power Shell
 * Python
 * Ruby
 * Swift
-* VisualBasic
+* Visual Basic
