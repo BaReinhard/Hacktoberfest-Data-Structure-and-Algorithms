@@ -1,4 +1,4 @@
-class HashTable:
+class hashTable:
     def __init__(self):
         self.size = 13  # hash table with size of 13 to be consistent with cpp code
         self.slots = [None] * self.size
@@ -10,40 +10,35 @@ class HashTable:
     def rehash(self, oldhash, size): # just a simple linear probing function for rehashing
         return ( oldhash + 1 ) % size
 
-    def put(self, key, data):
+    def insert(self, key, data):
         hash_val = self.hashfunction(key, len(self.slots))
 
         if self.slots[hash_val] == None:
             self.slots[hash_val] = key
             self.data[hash_val] = data
         else:
-            if self.slots[hash_val] == key:
-                self.data[hash_val] = data
-            else:
-                nextslot = self.rehash(hash_val,len(self.slots))
-                while self.slots[nextslot] != None and self.slots[nextslot] != key:
-                    nextslot = self.rehash(nextslot,len(self.slots))
+            new_slot = self.rehash(hash_val,len(self.slots))
+            while self.slots[new_slot] != None and self.slots[new_slot] != key:
+                new_slot = self.rehash(new_slot,len(self.slots))
 
-                if self.slots[nextslot] == None:
-                    self.slots[nextslot]=key
-                    self.data[nextslot]=data
-                else:
-                    self.data[nextslot] = data
+            if self.slots[new_slot] == None:
+                self.slots[new_slot] = key
+                self.data[new_slot] = data
 
-    def get(self,key):
-        startslot = self.hashfunction(key,len(self.slots))
+    def get(self, key):
+        first_slot = self.hashfunction(key, len(self.slots))
 
         data = None
         stop = False
         found = False
-        position = startslot
+        position = first_slot
         while self.slots[position] != None and not found and not stop:
             if self.slots[position] == key:
                 found = True
                 data = self.data[position]
             else:
                 position=self.rehash(position,len(self.slots))
-                if position == startslot:
+                if position == first_slot:
                     stop = True
         return data
 
@@ -51,6 +46,6 @@ class HashTable:
         return self.get(key)
 
     def __setitem__(self,key,data):
-        self.put(key,data)
+        self.insert(key,data)
 
         
