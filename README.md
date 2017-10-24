@@ -21,8 +21,8 @@ ex: /algorithms/bubble_sort/cpp/bubble_sort.cpp
 
 ## How To:
 
-1. Fork Repo on Web Page
-2. `git clone https://github.com/{your-username}/Hacktoberfest-Data-Structure-and-Algorithms`
+1. Click on the Fork icon located in the top right corner then go to the repository where you forked.
+2. Click on clone button and copy the link then clone the repo as shown here `git clone https://github.com/{your-username}/Hacktoberfest-Data-Structure-and-Algorithms`
 3. Code your files in the proper directory based on the instructions above
 4. add all your files `git add your/directory/path/to/file/` (see new directory structure above)
 5. commit your file changes `git commit -m "Whatever you did here, e.g. created linkedlist class in C++"`
