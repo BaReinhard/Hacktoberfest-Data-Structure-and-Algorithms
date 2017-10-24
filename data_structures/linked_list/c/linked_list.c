@@ -17,18 +17,21 @@ int main()
 		printf("enter choice\n");
 		printf("1.creation\n2.insertion\n3.deletion\n4.search\n5.display\n");
 	    scanf("%d",&n);
-		if(n==1)
-			create();
-		else if(n==2)
-			insert();
-		else if (n==3)
-			delete();
-		else if(n==4)
-			search();
-		else if(n==5)
-			display();
-		else
-			printf("wrong choice\n");
+		switch(n)
+		{
+			case '1' : create();
+				break;
+			case '2' : insert();
+				break;
+			case '3' : delete();
+				break;
+			case '4' : search();
+				break;
+			case '5' : display();
+				break;
+			default:printf("wrong choice\n");
+				break;
+		}
 	    printf("\nwant to continue\n");
         scanf("%s",&ch);
     }while(ch!='n');
