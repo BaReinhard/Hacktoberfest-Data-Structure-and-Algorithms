@@ -1,18 +1,18 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Queue {
-    List<Integer> _data = new ArrayList<Integer>();
-    int _top = -1;
-    public Queue(){
+public class Stack {
+    private List<Integer> _data = new ArrayList<Integer>();
+    private int _top = -1;
+    public Stack(){
 
     }
-    public void Enqueue(int val){
+    public void Push(int val){
         _top++;
         _data.add(val);
     }
 
-    public void Dequeue(){
+    public void Pop(){
         if(!isEmpty())
             _data.remove(_top--);
         else
@@ -26,3 +26,4 @@ public class Queue {
         return _top == -1;
     }
 }
+
