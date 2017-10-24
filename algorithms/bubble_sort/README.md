@@ -6,6 +6,7 @@ This folder contains examples of the bubble sort algorithm in the following prog
 * C
 * C++
 * Crystal
+* C#
 * Elixir
 * GO
 * Haskell
@@ -13,6 +14,7 @@ This folder contains examples of the bubble sort algorithm in the following prog
 * JavaScript
 * Kotlin
 * Objective-C
+* PowerShell
 * Python
 * Ruby
 * Swift
