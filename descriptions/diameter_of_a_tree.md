@@ -2,7 +2,7 @@
 ## ELI5
 The diameter of a tree is its width.The maximum possible number of items between any two end-most items in a tree.
 
-## Explaination
+## Explanation
 The diameter of a tree (sometimes called the width) is the number of nodes on the longest path between two leaves in the tree.
 
 The diameter of a tree T is the largest of the following quantities:
