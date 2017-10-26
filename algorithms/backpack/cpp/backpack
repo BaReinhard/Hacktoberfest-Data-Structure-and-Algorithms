@@ -1,0 +1,53 @@
+#include <iostream>
+#include <algorithm>
+
+using namespace std;
+
+int main(){
+
+    int n, capacity;
+    int dp[10][10] = {0};
+
+ /*   for(int i = 1; i <= n; i++){
+        for(int j = 1; j <= capacity; j++){
+           dp[i][j] = -1;
+        }
+    }*/
+
+    cin>>n>>capacity;
+
+    std::pair<int, int> objects[10];
+
+    for(int i = 1; i <= n; i++){
+        cin>>objects[i].first>>objects[i].second;
+    }
+
+    dp[0][0] = 0;
+
+    for (int i = 1; i <=  n; i++){
+        for(int j = 1; j <= capacity; j++){
+            if(objects[i].first <= j) {
+                dp[i][j] = max(dp[i - 1][j],
+                               dp[i - 1][j - objects[i].first] + objects[i].second);
+            }
+        }
+    }
+
+    for(int i = 0; i <= n; i++){
+        for(int j = 0; j <= capacity; j++){
+            cout<<dp[i][j]<<' ';
+        }
+        cout<<endl;
+    }
+
+    int i = n, j = capacity;
+    while(i > 0){
+        cout<<objects[i].first<<' '<<objects[i].second<<endl;
+        j -= objects[i].second;
+        i--;
+        while(dp[i-1][j] == dp[i-2][j]){
+            i--;
+        }
+    }
+
+}
