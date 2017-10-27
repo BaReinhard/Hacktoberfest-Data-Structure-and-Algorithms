@@ -32,7 +32,7 @@ func (l *LinkedList) First() *Node {
 	return l.first
 }
 
-func (l *LinkedList) ToString() string {
+func (l *LinkedList) String() string {
 	str := ""
 	if l.first != nil {
 		n := l.first
@@ -51,5 +51,5 @@ func main() {
 	list.Add("b")
 	list.Add("c")
 
-	fmt.Printf(list.ToString() + "\n")
+	fmt.Println(list)
 }
