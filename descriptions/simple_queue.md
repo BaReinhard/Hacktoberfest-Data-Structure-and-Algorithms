@@ -19,6 +19,10 @@ enqueue(0) gives queue = 8,4,5,6,7,0.    (REAR = REAR+1)(FRONT =1,REAR=6)
 dequeue() gives queue  = _,4,5,6,7,0.    (FRONT = FRONT +1)(FRONT=2,REAR=6)
 First element of queue is removed from queue and returned via dequeue.
 USE: Used when multiple processes are waiting for a resourse.e.g. Disk scheduliing.
+
+### Reference
+* [simple queue implementation using arrays in c](http://www.sanfoundry.com/c-program-queue-using-array/)
+
 ### Pros
 *Time complexity of all operations like enqueue(), dequeue(), isFull(), isEmpty(), front() and rear() is O(1)
 * It can be implemented by using both array and linked list.
