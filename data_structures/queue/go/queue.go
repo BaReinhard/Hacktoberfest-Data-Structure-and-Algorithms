@@ -7,7 +7,7 @@ type queue struct {
 }
 
 func NewQueue() queue {
-    return queue{nil}
+    return queue{}
 }
 
 func (q *queue) Enqueue(value interface{}) {
