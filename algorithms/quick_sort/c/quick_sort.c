@@ -1,4 +1,6 @@
 #include<stdio.h>
+#include <stdbool.h>
+#include <stdlib.h>
 
 bool array_is_valid(int *a, unsigned int length) {
     return ((length == 0 && a == NULL) || (length != 0 && a != NULL));
@@ -15,6 +17,35 @@ bool array_is_sorted(int *a, unsigned int length) {
     i++;
   }
   return sorted;
+}
+
+void swap(int *a, unsigned int i, unsigned int j) {
+  unsigned int tmp = a[i];
+  a[i] = a[j];
+  a[j] = tmp;
+  return;
+}
+
+int pivot(int *a, int izq, int der){
+  int piv, i, j;
+  piv = izq;
+  i = izq + 1;
+  j = der;
+
+  while ( i <= j) {
+    if ( a[i] <= a[piv]) {
+      i++;
+    } else if (a[j] > a[piv]) {
+      j--;
+    } else if (a[i] > a[piv] && a[j] <= a[piv]){
+      swap(a,i,j);
+      i++;
+      j--;
+    }
+  }
+  swap(a,piv,j);
+  piv = j;
+  return (piv);
 }
 
 void quick_sort_rec(int *a, int izq, int der){
