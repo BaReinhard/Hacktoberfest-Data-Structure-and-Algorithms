@@ -7,6 +7,7 @@
 #define BST_H
 
 #include <iostream>
+#include <climits.h>
 
 template <class T>
 class BinarySearchTree {
@@ -34,12 +35,28 @@ class BinarySearchTree {
     return find(data, root);
   }
 
+
   // print tree in order out to stdout
   void printTree()
   {
     std::cout << "[ ";
     print(root);
     std::cout << " ]\n";
+  }
+
+  // check if given binary tree is valid BST or not
+  bool isValid() {
+      return isValidHelper(root, INT_MIN, INT_MAX);
+  }
+
+  // find height of BST
+  int height(){
+      return heightHelper(root);
+  }
+
+  // find diameter(width) of BST
+  int diameter(){
+      return diameterHelper(root);
   }
 
  private:
@@ -254,6 +271,63 @@ class BinarySearchTree {
     }
   }
 
+  // helper function to check if given binary tree is valid BST or not
+  bool isValidBSTHelper(Node *node, int min, int max) { 
+      if(!node) // If Root is NULL
+          return true;
+      
+      // Node data should not be less than min or greater than max
+      if(node->data < min || node->data > max)
+          return false;
+      
+      // ( Corner Cases )
+      if(node->left && node->left->data >= node->data)
+          return false;
+      if(node->right && node->right->data <= node->data)
+          return false;
+
+      // check for left sub-tree and right sub-tree
+      return isValidBSTHelper(node->left, min, node->data-1) && isValidBSTHelper(node->right, node->data+1, max);
+
+}
+
+  // Find Height Helper
+  int heightHelper(Node* parent){
+       // If parent is NULL == Height is 0
+       if(!parent)
+           return 0;
+
+      // Height of left sub-tree
+      int lheight = heightHelper(parent->left);
+      // Height of right sub-tree
+      int rheight = heightHelper(parent->right);
+
+      // Height = 1 + \
+                  max(left sub-tree height, right sub-tree height)
+      return 1 + max(lheight, rheight);
+  }
+
+  // Find Diameter(width) Helper
+  int diameterHelper(Node* parent) {
+      if(!parent)
+          return 0;
+      
+      // Get height of left/right sub-tree
+      int lheight = heightHelper(parent->left);
+      int rheight = heightHelper(parent->right);
+
+      // Get diameter of left/right sub-tree
+      int ldiameter = diameterHelper(parent->left);
+      int rdiameter = diameterHelper(parent->right);
+
+      /* Return max of following three
+       * 1) Diameter of left subtree
+       * 2) Diameter of right subtree
+       * 3) height of left subtree + right subtree + 1
+       */
+      return max(lheight+rheight+1, max(ldiameter,rdiameter));
+  }
+
   // root of the tree
   Node *root;
 };
@@ -262,3 +336,4 @@ class BinarySearchTree {
 typedef BinarySearchTree<int> intBST;
 
 #endif // BST_H
+
