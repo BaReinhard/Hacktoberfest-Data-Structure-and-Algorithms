@@ -54,6 +54,11 @@ class BinarySearchTree {
       return heightHelper(root);
   }
 
+  // find diameter(width) of BST
+  int diameter(){
+      return diameterHelper(root);
+  }
+
  private:
   // basic building block of tree
   struct Node {
@@ -301,6 +306,28 @@ class BinarySearchTree {
                   max(left sub-tree height, right sub-tree height)
       return 1 + max(lheight, rheight);
   }
+
+  // Find Diameter(width) Helper
+  int diameterHelper(Node* parent) {
+      if(!parent)
+          return 0;
+      
+      // Get height of left/right sub-tree
+      int lheight = heightHelper(parent->left);
+      int rheight = heightHelper(parent->right);
+
+      // Get diameter of left/right sub-tree
+      int ldiameter = diameterHelper(parent->left);
+      int rdiameter = diameterHelper(parent->right);
+
+      /* Return max of following three
+       * 1) Diameter of left subtree
+       * 2) Diameter of right subtree
+       * 3) height of left subtree + right subtree + 1
+       */
+      return max(lheight+rheight+1, max(ldiameter,rdiameter));
+  }
+
   // root of the tree
   Node *root;
 };
@@ -309,3 +336,4 @@ class BinarySearchTree {
 typedef BinarySearchTree<int> intBST;
 
 #endif // BST_H
+
