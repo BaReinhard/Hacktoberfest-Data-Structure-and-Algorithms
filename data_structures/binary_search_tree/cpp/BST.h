@@ -262,7 +262,7 @@ class BinarySearchTree {
   }
 
   // helper function to check if given binary tree is valid BST or not
-  bool isValidBSTHelper(Node<T> *node, int min, int max) { 
+  bool isValidBSTHelper(Node *node, int min, int max) { 
       if(!node) // If Root is NULL
           return true;
       
