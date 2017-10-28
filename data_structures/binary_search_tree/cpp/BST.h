@@ -49,6 +49,11 @@ class BinarySearchTree {
       return isValidHelper(root, INT_MIN, INT_MAX);
   }
 
+  // find height of BST
+  int height(){
+      return heightHelper(root);
+  }
+
  private:
   // basic building block of tree
   struct Node {
@@ -281,7 +286,21 @@ class BinarySearchTree {
 
 }
 
+  // Find Height Helper
+  int heightHelper(Node* parent){
+       // If parent is NULL == Height is 0
+       if(!parent)
+           return 0;
 
+      // Height of left sub-tree
+      int lheight = heightHelper(parent->left);
+      // Height of right sub-tree
+      int rheight = heightHelper(parent->right);
+
+      // Height = 1 + \
+                  max(left sub-tree height, right sub-tree height)
+      return 1 + max(lheight, rheight);
+  }
   // root of the tree
   Node *root;
 };
