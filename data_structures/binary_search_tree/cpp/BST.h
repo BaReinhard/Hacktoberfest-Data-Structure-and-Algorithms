@@ -7,6 +7,7 @@
 #define BST_H
 
 #include <iostream>
+#include <climits.h>
 
 template <class T>
 class BinarySearchTree {
@@ -34,12 +35,18 @@ class BinarySearchTree {
     return find(data, root);
   }
 
+
   // print tree in order out to stdout
   void printTree()
   {
     std::cout << "[ ";
     print(root);
     std::cout << " ]\n";
+  }
+
+  // check if given binary tree is valid BST or not
+  bool isValid() {
+      return isValidHelper(root, INT_MIN, INT_MAX);
   }
 
  private:
@@ -253,6 +260,27 @@ class BinarySearchTree {
       }
     }
   }
+
+  // helper function to check if given binary tree is valid BST or not
+  bool isValidBSTHelper(Node<T> *node, int min, int max) { 
+      if(!node) // If Root is NULL
+          return true;
+      
+      // Node data should not be less than min or greater than max
+      if(node->data < min || node->data > max)
+          return false;
+      
+      // ( Corner Cases )
+      if(node->left && node->left->data >= node->data)
+          return false;
+      if(node->right && node->right->data <= node->data)
+          return false;
+
+      // check for left sub-tree and right sub-tree
+      return isValidBSTHelper(node->left, min, node->data-1) && isValidBSTHelper(node->right, node->data+1, max);
+
+}
+
 
   // root of the tree
   Node *root;
