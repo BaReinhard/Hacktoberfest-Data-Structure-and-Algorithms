@@ -1,5 +1,3 @@
-
-
 //Bubblesort with first Element first order, inplace (with 1 additional space for the swap)
 pub fn bubble_sort_t<T, F>(array: &mut Vec<T>, compare: F) -> &mut Vec<T> where F: Fn(&T,&T) -> bool {
     for outer in 0..array.len() {
