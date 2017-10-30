@@ -1,0 +1,71 @@
+Testing createList()
+theList->capacity == 6
+
+Testing getSize()
+inserting -1018354496
+size of list = 0
+
+Testing insertFront()
+inserting 10
+size of list = 1
+head->data = 10
+inserting 9
+size of list = 2
+head->data = 9
+inserting 8
+size of list = 3
+head->data = 8
+inserting 6
+size of list = 4
+head->data = 6
+
+Testing insertNth()
+size of list = 5
+
+Testing removeHead()
+size of list = 4
+head->data = 8
+tail address: 0x8d5270
+
+Testing removeTail()
+size of list = 3
+head->data = 8
+tail address: 0x8d5290  <-this address should be different then the tail->address above, if not remove tail is not working properly
+
+Testing InsertBack()
+inserting 27
+size of list = 4
+inserting 2
+size of list = 5
+inserting 56
+size of list = 6
+
+Testing getHeadData()
+head->data = 8
+
+Testing getTailData()
+tail->data = 56
+
+Testing getNodeData()
+
+Testing getNthData()
+secondNode->data = 59
+
+Testing InsertNth()
+inserting 13 at the 3th spot
+size of list = -1
+
+Testing removeNth()
+removing 6th spot
+size of list = -1
+
+Testing getNextNode()
+
+Testing getPrevNode()
+
+Testing getHead()
+
+Testing getTail()
+
+Testing destroyList()
+the destroyList flag == 0 (0 is success)
