@@ -11,7 +11,7 @@ pub fn bubble_sort_t<T, F>(array: &mut Vec<T>, compare: F) -> &mut Vec<T> where 
 }
 
 fn main() {
-	let mut sorting_vec: Vec<i32> = vec![10, 19, 13, 1, 11, 7, 3, 8, 0];
+    let mut sorting_vec: Vec<i32> = vec![10, 19, 13, 1, 11, 7, 3, 8, 0];
     
     bubble_sort_t(&mut sorting_vec, |x,y| x < y);
 
