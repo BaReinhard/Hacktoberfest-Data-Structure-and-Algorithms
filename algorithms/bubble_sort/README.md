@@ -17,5 +17,6 @@ This folder contains examples of the bubble sort algorithm in the following prog
 * Power Shell
 * Python
 * Ruby
+* Rust
 * Swift
 * Visual Basic
