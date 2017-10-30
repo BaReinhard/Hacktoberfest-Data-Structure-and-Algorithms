@@ -1,4 +1,3 @@
-/* Author: Prakhar Jain */
 #include <stdio.h>
 #include <stdlib.h>
 
