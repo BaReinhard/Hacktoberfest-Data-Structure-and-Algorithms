@@ -7,13 +7,12 @@ class UnionFind{
 	vector<int> size;
 	int components;
 	
-	// Finds the root of p, which is the identifier of its component	
+	// Finds the root of p, which is the identifier of its component, while applying path compression to speed up future lookups	
 	int root(int p){
-		while(p != parent[p]){
-			parent[p] = parent[parent[p]];
-			p = parent[p];
+		if(p != parent[p]){
+			parent[p] = root(parent[p]);
 		}
-		return p;
+		return parent[p];
 	}
 
 	// Creates the Union-Find data structure
