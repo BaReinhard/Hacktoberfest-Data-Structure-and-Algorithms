@@ -81,7 +81,7 @@ class SingleLinkedList {
             // move pointer to the `n` position without
             // bypassing the tail position
             while (pointer !== null &&
-                    counter < n) {
+                    counter < (n - 1)) {
                 pointer = pointer.next;
                 counter++;
             }
@@ -89,8 +89,15 @@ class SingleLinkedList {
                 throw new Error("Out of bounds exception ");
             }
             // we reach in the position
-            newNode.next = pointer.next;
-            pointer.next = newNode;
+            if (n == 0) {
+                this.addFirst(value);
+            } else {
+                newNode.next = pointer.next;
+                if (pointer.next == null) {
+                    this.tail = newNode;
+                }
+                pointer.next = newNode;
+            }
             this.size++;
         }
     }
