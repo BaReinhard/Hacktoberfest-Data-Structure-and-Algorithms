@@ -62,6 +62,7 @@ class SingleLinkedList {
             newNode.next = this.head;
             this.head = newNode;
         }
+        this.size++;
     }
 
     /**
@@ -70,6 +71,9 @@ class SingleLinkedList {
      * @param {Object} value 
      */
     addAtPos(n, value) {
+        if (n >= this.size) {
+            throw new Error("Out of bounds exception");
+        }
         let newNode = new Node(value);
         if (!this._emptyList(newNode)) {
             let pointer = this.head;
@@ -87,6 +91,7 @@ class SingleLinkedList {
             // we reach in the position
             newNode.next = pointer.next;
             pointer.next = newNode;
+            this.size++;
         }
     }
 
@@ -96,6 +101,7 @@ class SingleLinkedList {
     removeFirst() {
         if (this.head !== null) {
             this.head = this.head.next;
+            this.size--;
         }
     }
 
@@ -110,6 +116,7 @@ class SingleLinkedList {
             }
             pointer.next = null;
             this.tail = pointer;
+            this.size--;
         }
     }
 
