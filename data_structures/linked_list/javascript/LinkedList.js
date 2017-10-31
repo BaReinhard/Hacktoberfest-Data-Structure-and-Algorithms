@@ -140,3 +140,26 @@ class SingleLinkedList {
 }
 
 export default SingleLinkedList;
+
+// Usage:
+// import LinkedList from './LinkedList';
+
+// let a = new LinkedList();
+// a.addLast(10);
+// a.addLast(20);
+// a.addLast(30);
+// a.addFirst(5);
+// a.addFirst("S");
+// a.list();
+// console.info('-');
+// a.removeFirst();
+// a.list();
+// console.info('-');
+// a.removeLast();
+// a.list();
+// console.info('-');
+// a.addAtPos(0, 15);
+// a.list();
+// console.info('--');
+// a.addAtPos(2, 17);
+// a.list();
