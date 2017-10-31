@@ -142,3 +142,25 @@ class DoubleLinkedList {
 }
 
 export default DoubleLinkedList;
+
+// Example usage:
+// import LinkedList from './doublelinkedlist';
+
+// let a = new LinkedList();
+// a.addLast(10);
+// a.addLast(20);
+// a.addLast(30);
+// a.addFirst(5);
+// a.addFirst("S");
+// a.list();        // S 5 10 20 30 
+// console.info("---");
+// a.reverseList(); // 30 20 10 5 S
+// console.info("---");
+// a.addAtPos(4, 12); 
+// a.reverseList(); // 12 30 20 10 5 S
+// console.info("---");
+// a.removeFirst();
+// a.reverseList(); // 12 30 20 10 5
+// console.info("---");
+// a.removeLast();
+// a.list();        // 5 10 20 30
