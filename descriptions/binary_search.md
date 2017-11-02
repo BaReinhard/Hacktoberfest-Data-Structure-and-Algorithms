@@ -2,7 +2,8 @@
 **Binary Serch** is a way of searching for a thing in a list of things. The list must be sorted, that is, it must be in order of some comparable value or the it won't work. First, we go to the middle of the list and see if the item value equals to the value we want to find. Then, if our value is less/greater than the item in the middle, we work on a new list (which starts from the middle and all the way to the bottom or top) and everything on the bottom or top side. We keep doing this until we find the value we were looking for or if were fluctuating between two elements.
 
 ## Pros
-* It takes too much less time than a reqular sequential search
+* It takes much less time than a reqular sequential search. 
+* Average case of O(log n) vs O(n) for a linear search
 
 ## Cons
 * The list must be sorted
@@ -17,7 +18,7 @@ And we want to find an element if it exists in the list or not
 
 The naive solution is to go in the list element by element, ask if this is the element I'm looking for or not.
 
-The worest case is that the element is not in the list, or at the end of it,
+The worst case is that the element is not in the list, or at the end of it,
 
 then the time Complexity it takes to end the search process is O(n);
 
