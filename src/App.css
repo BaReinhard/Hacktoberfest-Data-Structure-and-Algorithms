@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css?family=Audiowide|Germania+One|Poiret+One');
+.App {
+    text-align: center;
+}
+
+.App-logo {
+    animation: App-logo-spin infinite 20s ease-in-out;
+    height: 80px;
+    width: 50vw;
+}
+
+.App-header {
+    background-image: radial-gradient(circle, #3241a6 0, #202a6b 120%);
+    height: 150px;
+    padding: 20px;
+    color: #ff9465;
+}
+
+.sanitized div {
+    white-space: wrap;
+}
+.App-title {
+    font-size: 1.5em;
+}
+
+.App-intro {
+    font-size: large;
+}
+
+@keyframes App-logo-spin {
+    100% {
+        transform: translate(0, 0);
+    }
+    75% {
+        transform: translate(50px, 37.5px);
+    }
+    50% {
+        transform: translate(0, 75px);
+    }
+    25% {
+        transform: translate(-50px, 37.5px);
+    }
+    0% {
+        transform: translate(0, 0);
+    }
+}
+.content-container {
+    width: 100vw;
+    background-color: #fefefe;
+    box-sizing: border-box;
+}
+.language {
+    font-style: italic;
+}
+.file-name {
+    font-style: italic;
+}
+.content {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 40px auto;
+    text-align: left;
+    background-color: #eee;
+    padding: 5px;
+}
+
+.sub-content {
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+.language-sub-content {
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+pre,
+.sanitized {
+    white-space: pre-wrap;
+    background-color: #ddd;
+    margin-left: 15px;
+    margin-right: 15px;
+    box-sizing: border-box;
+    padding: 30px;
+    text-overflow: scroll;
+}
+.view-code-button {
+    padding: 15px;
+    width: 25%;
+    color: white;
+    border: none;
+    background: radial-gradient(circle, #3241a6 0, #202a6b 120%);
+}
+.view-code-button:active {
+    color: white;
+    border: none;
+    background: radial-gradient(circle, #3241a6 0, #171f4e 180%);
+}
+
+.language-subcontent-header,
+.file-name-header {
+    font-family: 'Poiret One', cursive;
+    font-size: 1.2em;
+}
+.subcontent-header {
+    font-family: 'Poiret One', cursive;
+    font-size: 1.6em;
+}
+.content-header {
+    font-family: 'Audiowide', cursive;
+    font-style: bold;
+    font-size: 2em;
+}
+.directory-button {
+    background: radial-gradient(circle, #3241a6 0, #171f4e 180%);
+    color: white;
+    width: 40%;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 2px;
+}
+.directory-button:active {
+    background: radial-gradient(circle, #4458e0 0, #2e3f9c 180%);
+}
+
+.directory-button:hover {
+    cursor: pointer;
+    background-color: #ddd;
+}
+.directory-choice {
+    box-sizing: border-box;
+    padding: 10px;
+    width: 25%;
+    text-align: center;
+    display: inline-block;
+    color: black;
+    all: none;
+}
+.directory-choice {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    background: radial-gradient(circle, #f66364 0, #d45558 180%);
+    color: white;
+    width: 48%;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 2px;
+}
+.directory-choice:hover {
+    background-color: #ddd;
+    color: grey;
+}
+.directory-choice:visited,
+.directory-choice:active {
+    all: none;
+    color: white;
+}
+.directory-choice-container {
+    width: 75%;
+    margin: 0 auto;
+    height: 150px;
+}
+@media (min-width: 1100px) {
+    .content {
+        margin: 40px auto;
+        text-align: left;
+        background-color: #eee;
+        padding: 30px;
+    }
+    .sub-content {
+        margin: 0 auto;
+        width: 95%;
+        box-sizing: border-box;
+    }
+    .language-sub-content {
+        margin: 0 auto;
+        width: 95%;
+        box-sizing: border-box;
+    }
+    pre,
+    .sanitized {
+        background-color: #ddd;
+        margin-left: 0px;
+        margin-right: 0px;
+        box-sizing: border-box;
+        padding: 30px;
+    }
+
+    .directory-button {
+        background: radial-gradient(circle, #3241a6 0, #171f4e 180%);
+        color: white;
+        width: 25%;
+        display: inline-block;
+        box-sizing: border-box;
+        padding: 10px;
+        margin: 2px;
+    }
+    .directory-choice {
+        background: radial-gradient(circle, #f66364 0, #d45558 180%);
+        color: white;
+        width: 25%;
+        display: inline-block;
+        box-sizing: border-box;
+        padding: 10px;
+        margin: 2px;
+    }
+}
