@@ -15,12 +15,15 @@
 
   ;pop method: removes the head and returns it
   (define (pop)
-    (set! temp (car arr))
+    (if (eqv? length 0) (display "Can't Pop"))
+    (set! length (- length 1))
+    (set! temp (cdr arr))
     (set! arr (cdr arr))
     temp)
 
   ;push method: puts x at the head
   (define (push x)
+    (set! length (+ length 1))
     (set! arr (cons x arr)))
 
   ;method to get method from user
@@ -42,6 +45,10 @@
   ((stack 'print))(newline)
   ((stack 'pop))
   ((stack 'print))(newline)
+  ((stack 'pop))
+  ((stack 'print))(newline)
+  ((stack 'pop))
+  ;((stack 'pop))
   )
 
 (testing)
