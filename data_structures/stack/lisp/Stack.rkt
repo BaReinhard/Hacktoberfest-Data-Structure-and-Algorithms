@@ -13,6 +13,7 @@
   (define (print)
     (display arr))
 
+  ;receiving mpair violation instead of exiting procedure call
   ;pop method: removes the head and returns it
   (define (pop)
     (if (eqv? length 0) (display "Can't Pop"))
