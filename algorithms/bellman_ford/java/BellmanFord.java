@@ -49,7 +49,7 @@ class Graph
 			int weight = edgeList.get(j).weight;
 			
 			if (dist[u] != Integer.MAX_VALUE && dist[u] + weight < dist[v]) {
-				System.out.println("Graph contains negative weight cycle");
+				System.out.println("graph contains negative weight cycle");
 				return;
 			}
 			
