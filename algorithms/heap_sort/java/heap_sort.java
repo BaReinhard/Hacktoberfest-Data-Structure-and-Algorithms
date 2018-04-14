@@ -1,76 +1,74 @@
-/*
- * Java Program to Implement Heap Sort
- */
- 
-import java.util.Scanner;
- 
-/* Class HeapSort */
-public class HeapSort 
-{    
-    private static int N;
-    /* Sort Function */
-    public static void sort(int arr[])
-    {       
-        heapify(arr);        
-        for (int i = N; i > 0; i--)
-        {
-            swap(arr,0, i);
-            N = N-1;
-            maxheap(arr, 0);
-        }
-    }     
-    /* Function to build a heap */   
-    public static void heapify(int arr[])
+// Java program for implementation of Heap Sort
+public class HeapSort
+{
+    public void sort(int arr[])
     {
-        N = arr.length-1;
-        for (int i = N/2; i >= 0; i--)
-            maxheap(arr, i);        
+        int n = arr.length;
+ 
+        // Build heap (rearrange array)
+        for (int i = n / 2 - 1; i >= 0; i--)
+            heapify(arr, n, i);
+ 
+        // One by one extract an element from heap
+        for (int i=n-1; i>=0; i--)
+        {
+            // Move current root to end
+            int temp = arr[0];
+            arr[0] = arr[i];
+            arr[i] = temp;
+ 
+            // call max heapify on the reduced heap
+            heapify(arr, i, 0);
+        }
     }
-    /* Function to swap largest element in heap */        
-    public static void maxheap(int arr[], int i)
-    { 
-        int left = 2*i ;
-        int right = 2*i + 1;
-        int max = i;
-        if (left <= N && arr[left] > arr[i])
-            max = left;
-        if (right <= N && arr[right] > arr[max])        
-            max = right;
  
-        if (max != i)
+    // To heapify a subtree rooted with node i which is
+    // an index in arr[]. n is size of heap
+    void heapify(int arr[], int n, int i)
+    {
+        int largest = i;  // Initialize largest as root
+        int l = 2*i + 1;  // left = 2*i + 1
+        int r = 2*i + 2;  // right = 2*i + 2
+ 
+        // If left child is larger than root
+        if (l < n && arr[l] > arr[largest])
+            largest = l;
+ 
+        // If right child is larger than largest so far
+        if (r < n && arr[r] > arr[largest])
+            largest = r;
+ 
+        // If largest is not root
+        if (largest != i)
         {
-            swap(arr, i, max);
-            maxheap(arr, max);
+            int swap = arr[i];
+            arr[i] = arr[largest];
+            arr[largest] = swap;
+ 
+            // Recursively heapify the affected sub-tree
+            heapify(arr, n, largest);
         }
-    }    
-    /* Function to swap two numbers in an array */
-    public static void swap(int arr[], int i, int j)
+    }
+ 
+    /* A utility function to print array of size n */
+    static void printArray(int arr[])
     {
-        int tmp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = tmp; 
-    }    
-    /* Main method */
-    public static void main(String[] args) 
+        int n = arr.length;
+        for (int i=0; i<n; ++i)
+            System.out.print(arr[i]+" ");
+        System.out.println();
+    }
+ 
+    // Driver program
+    public static void main(String args[])
     {
-        Scanner scan = new Scanner( System.in );        
-        System.out.println("Heap Sort Test\n");
-        int n, i;    
-        /* Accept number of elements */
-        System.out.println("Enter number of integer elements");
-        n = scan.nextInt();    
-        /* Make array of n elements */
-        int arr[] = new int[ n ];
-        /* Accept elements */
-        System.out.println("\nEnter "+ n +" integer elements");
-        for (i = 0; i < n; i++)
-            arr[i] = scan.nextInt();
-        /* Call method sort */
-        sort(arr);
-        /* Print sorted Array */
-        System.out.println("\nElements after sorting ");        
-        for (i = 0; i < n; i++)
-            System.out.print(arr[i]+" ");            
-        System.out.println();            
-    }    
+        int arr[] = {12, 11, 13, 5, 6, 7};
+        int n = arr.length;
+ 
+        HeapSort ob = new HeapSort();
+        ob.sort(arr);
+ 
+        System.out.println("Sorted array is");
+        printArray(arr);
+    }
 }
