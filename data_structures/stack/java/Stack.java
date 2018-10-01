@@ -1,86 +1,81 @@
-import java.util.*;
+import java.util.Iterator;
+import java.util.NoSuchElementException;
 
-public class Stack<T>{
-  private Node topNode;
-  private int size;
+class Stack<T> implements Iterable<T> {
 
-  public Stack(){
-    this.topNode = null;
-    this.size = 0;
-  }
+    private Node first = null;
 
-  public boolean isEmpty(){
-    return this.size == 0;
-  }
-
-  public void push(T data){
-    Node node = new Node<T>();
-    node.setData(data);
-    if(!isEmpty()){
-      node.setPreview(this.topNode);
-      this.topNode.setNext(node);
-      this.topNode = node;
-    }else{
-      this.topNode = node;
+    class Node {
+        T item;
+        Node next;
     }
-    this.size++;
-  }
 
-  public T top(){
-    if(!isEmpty()){
-      return (T) this.topNode;
+    public boolean isEmpty() {
+        return first == null;
     }
-    return null;
-  }
 
-  public void pop(){
-    if(!isEmpty()){
-      if(this.size == 1){
-        this.topNode = null;
-      }else{
-        Node a = this.topNode.getPreview();
-        a.setNext(null);
-        this.topNode = a;
-      }
-      this.size--;
-    }else{
-      System.out.println("There is no object on the stack!");
+    public void push(T item) {
+        Node oldFirst = first;
+        first = new Node();
+        first.item = item;
+        first.next = oldFirst;
     }
-  }
 
-  public void viewStack(){
-    if(!isEmpty()){
-      Node node = this.topNode;
-      while(node != null){
-        System.out.println(node.getData());
-        node = node.getPreview();
-      }
-    }else{
-      System.out.println("Stack is Empty!");
+    public T pop() {
+        T item = first.item;
+        first = first.next;
+        return item;
     }
-  }
+
+    @Override
+    public Iterator<T> iterator() {
+        return new ListIterator();
+    }
+
+    private class ListIterator implements Iterator<T> {
+        private Node current = first;
+
+        @Override
+        public boolean hasNext() {
+            return current != null;
+        }
+
+        @Override
+        public void remove() {
+            throw new UnsupportedOperationException(
+                    "Can't remove from iterable stack"
+            );
+        }
+
+        @Override
+        public T next() {
+            if (current == null)
+                throw new NoSuchElementException("No more items in iteration");
+
+            T item = current.item;
+            current = current.next;
+            return item;
+        }
+    }
 
     public static void main(String[] args) {
-      Stack s = new Stack<>();
-      s.push("a");
-      s.push("aa");
-      s.push("aaa");
-      s.push("aaaa");
+        Stack<Integer> integerStack = new Stack<>();
+        integerStack.push(8);
+        integerStack.push(2);
+        integerStack.push(3);
 
-      s.viewStack();
-      System.out.println("-------------------------");
-      s.pop();
-      s.viewStack();
-      System.out.println("-------------------------");
-      s.pop();
-      s.viewStack();
-      System.out.println("-------------------------");
-      s.pop();
-      s.viewStack();
-      System.out.println("-------------------------");
-      s.pop();
-      s.viewStack();
-      System.out.println("-------------------------");
+        System.out.println(integerStack.pop());
+        System.out.println(integerStack.pop());
+        System.out.println(integerStack.pop());
+
+
+        Stack<String> stringStack = new Stack<>();
+        stringStack.push("First");
+        stringStack.push("Second");
+        stringStack.push("Third");
+
+        System.out.println(stringStack.pop());
+        System.out.println(stringStack.pop());
+        System.out.println(stringStack.pop());
     }
-
 }
