@@ -14,10 +14,9 @@ class LinkedList {
         this.size = 0; 
     } 
 } 
-//**ADD METHOD***
 
-// adds an element at the end 
-// of list 
+//**ADD METHOD***
+// Adds an element at the end of list 
 add(element) 
 { 
     // creates a new node 
@@ -44,10 +43,9 @@ add(element)
     } 
     this.size++; 
 } 
-//***REMOVE***
 
-// removes a given element from the 
-// list 
+//***REMOVE***
+// Removes a given element from the list 
 removeElement(element) 
 { 
     var current = this.head; 
