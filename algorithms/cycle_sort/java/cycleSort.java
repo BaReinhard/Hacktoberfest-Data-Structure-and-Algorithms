@@ -63,6 +63,7 @@ class GFG
 					item = arr[pos];
 					arr[pos] = temp;
 					writes++;
+
 				}
 			}
 		}
@@ -74,6 +75,8 @@ class GFG
 		int arr[] = {1, 8, 3, 9, 10, 10, 2, 4 };
 		int n = arr.length;
 		cycleSort(arr, n) ;
+		System.outprintln("Sorting process is currently taking place");
+		System.out.println("One Moment left");
 
 		System.out.println("After sort : ");
 		for (int i =0; i<n; i++)
