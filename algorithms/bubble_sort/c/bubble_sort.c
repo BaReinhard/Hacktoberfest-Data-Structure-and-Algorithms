@@ -15,9 +15,13 @@ int main()
   printf("Enter size of array: ");
   scanf("%d", &size);
   int a[size];
+  
+  //for loop to enter the elements in an array
   for(i = 0; i < size; i++) {
     scanf("%d", &a[i]);
   }
+  
+  //Bubble sorting
   for(i = 0; i < size; i++) {
     for(j = 1; j < size - i; j++) {
       if(a[i] < a[j]) {
@@ -28,6 +32,7 @@ int main()
     }
   }
 
+  //Printing the sorted array elements
   for(i = 0; i < size; i++) {
     printf("%d", a[i]);
   }
