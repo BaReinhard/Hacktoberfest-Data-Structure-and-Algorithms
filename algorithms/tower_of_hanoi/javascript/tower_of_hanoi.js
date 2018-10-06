@@ -1,8 +1,8 @@
 
 // Prints the movement
 function moveDisk(from_pole, to_pole) {
-    console.log("Moving disk from " + 
-        from_pole + " to " + to_pole);
+    console.log(`Moving disk from  
+        ${from_pole} to ${to_pole}`);
 }
 
 // Tower of Hanoi implementation
