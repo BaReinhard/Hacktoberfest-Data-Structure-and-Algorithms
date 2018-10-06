@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include<conio.h>
 int binarySearch(int arr[], int l, int r, int key) {
   if (r >= l) {
        int mid = l + (r - l)/2;
@@ -22,6 +22,9 @@ int main(void) {
   int n = sizeof(arr)/ sizeof(arr[0]);
   int key = 10;
   int result = binarySearch(arr, 0, n-1, key);
-  (result == -1) ? printf("Element is not present in array") : printf("Element is present at index %d", result);
+  if(result==1)
+       printf("element is not present in array");
+  else
+       printf("element is present at index %d",result);
   return 0;
 }
