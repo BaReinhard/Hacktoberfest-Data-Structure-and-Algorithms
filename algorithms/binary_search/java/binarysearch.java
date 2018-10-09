@@ -5,8 +5,7 @@ class BinarySearch
     int binarySearch(int ar[], int l, int r, int x){
 		if(ar.length == 0) {
     		return -1;
-    	}
-		
+    	}	
         if (r >= l){
             int mid = l + (r - l) / 2;
             // If the search is present at the mid postion
