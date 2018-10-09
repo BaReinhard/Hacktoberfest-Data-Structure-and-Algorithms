@@ -1,0 +1,7 @@
+[package]
+name = "monte_carlo_pi"
+version = "0.1.0"
+authors = ["Giacomo Longo <gabibbo97@gmail.com>"]
+
+[dependencies]
+rand = "*"
