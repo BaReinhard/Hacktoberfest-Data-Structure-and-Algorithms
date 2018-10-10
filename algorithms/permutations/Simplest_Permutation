@@ -1,0 +1,5 @@
+#I am a newbie to python and so far this is the move I like the most:
+#Assuming that we have an x and a y that we want to permute simply:
+x,y = y,x
+
+#Thanks
