@@ -41,6 +41,14 @@ public class GenericMap<K,V>{
         }
         return false;
     }
+
+    boolean containsKey(K key){
+        for(int i=0;i<keys.size();i++){
+            if(keys.get(i).getKey()==key)
+                return true;
+        }
+        return false;
+    }
 }
 
 class KeyValue<K,V>{
