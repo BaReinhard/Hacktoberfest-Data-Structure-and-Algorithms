@@ -16,6 +16,8 @@ class Node{
 	// Input data in new node
 	public Node(int d) {
 		data = d ;
+		next = null;
+		prev = null;
 	}
 	
 	// set link to the next node
