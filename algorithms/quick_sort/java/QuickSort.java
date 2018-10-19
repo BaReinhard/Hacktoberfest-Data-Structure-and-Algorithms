@@ -25,11 +25,17 @@ public class QuickSort{
     }
 	
 	public static void main(String [] args){
-		int [] arr = {9, 7, 5, 11, 12, 2, 14, 3, 10, 4, 6};
-		System.out.print("Before: ");
-		print(arr);
-		quickSort(arr,0, arr.length-1);
-		System.out.print("After: ");
-		print(arr);
-	}
+		int n = 9;
+
+        int[] arr = {-3, -10, -5, -7, 0, 6, 4, 8, 2};
+        
+        int p = 0;
+        
+        int r = arr.length-1;
+
+        int[] result = quickSort(arr,p,r);
+
+        for(int i=0; i<arr.length; i++) {
+        	System.out.print(result[i]+" ");
+        }
 }
