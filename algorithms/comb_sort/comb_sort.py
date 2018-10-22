@@ -10,11 +10,11 @@ def comb_sort(lis, comb = None):
     while (gap >= 1):
         i = 0
         j = gap
-        #print("[=] Gap value: " + str(gap)) #DECOMMENT TO DEBUG
+        #print("[=] Gap value: " + str(gap)) #UNCOMMENT TO DEBUG
         while(j < len(lis)):
-            #print("[>] Compare: " + str(lis[i]) + " " + str(lis[j])) #DECOMMENT TO DEBUG
+            #print("[>] Compare: " + str(lis[i]) + " " + str(lis[j])) #UNCOMMENT TO DEBUG
             if(lis[i] > lis[j]):
-                #print("[!] Switched") #DECOMMENT TO DEBUG
+                #print("[!] Switched") #UNCOMMENT TO DEBUG
                 lis[i], lis[j] = lis[j], lis[i]
             i += 1
             j += 1
