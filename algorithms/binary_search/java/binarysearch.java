@@ -27,6 +27,7 @@ class BinarySearch
     public static void main(String args[])
     {
         BinarySearch ob = new BinarySearch();
+	    //using scanner class we can take input event and make it more genric
         int arr[] = {1, 4, 5, 10, 11, 27, 36, 67, 90};
         int n = arr.length;
         int x = 10;
