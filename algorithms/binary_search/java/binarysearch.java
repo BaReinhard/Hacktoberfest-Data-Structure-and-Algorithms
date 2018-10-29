@@ -1,36 +1,37 @@
+
 // Java implementation of Binary Search
-class BinarySearch
+public class BinarySearch
 {
-    // Returns index of x if it is present in arr[l..r], else return -1
-    int binarySearch(int ar[], int l, int r, int x){
-		if(ar.length == 0) {
-    		return -1;
-    	}
+    //takes index and number to search for
+    int binarySearch(int array[], int x){
+        
+        //where to start and end the search
+        int i = 0;
+        int end = array.length-1;
 		
-        if (r >= l){
-            int mid = l + (r - l) / 2;
-            // If the search is present at the mid postion
-            if (ar[mid] == x){
+        while (i <= end){
+            int mid = end + i/ 2;
+            // Finds element in the middle of the array
+            if (array[mid] == x) {
                return mid;
+            } else if (array[mid] > x) {
+                //limits to beginning of array
+               end = mid - 1;
+            } else {
+                //limits to end of the array
+            i = mid + 1;
             }
-            // If element is smaller than mid, then it can only be in left subarray
-            if (ar[mid] > x){
-               return binarySearch(ar, l, mid - 1, x);
-            }
-            // Else the element can only be present in right subarray
-            return binarySearch(ar, mid + 1, r, x);
         }
-        // We reach here when element is not present in array
+        // element is not present or array is empty
         return -1;
     }
     // Main method for testing
     public static void main(String args[])
     {
-        BinarySearch ob = new BinarySearch();
-        int arr[] = {1, 4, 5, 10, 11, 27, 36, 67, 90};
-        int n = arr.length;
-        int x = 10;
-        int result = ob.binarySearch(arr, 0, n - 1, x);
+        BinarySearch bs = new BinarySearch();
+        int arr[] = {1, 6, 8, 12, 13, 23, 30, 48, 120};
+        int x = 12;
+        int result = bs.binarySearch(arr, x);
         if (result == -1){
             System.out.println("Element not present");
         }
