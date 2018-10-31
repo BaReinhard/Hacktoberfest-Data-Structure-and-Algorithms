@@ -1,0 +1,211 @@
+public class DLL <E>
+{
+   private class DLNode <E>
+   {
+      private E value;
+      private DLNode prev;
+      private DLNode next;
+      public DLNode(E arg, DLNode <E> p, DLNode <E> n) //val, prev, next
+      {
+         value=arg;
+         prev=p;
+         next=n;
+      }
+      public DLNode()
+      {
+         value=null;
+         next=this;
+         prev=this;
+      }
+      public void setValue(E arg)
+      {
+         value=arg;
+      }
+      public void setNext(DLNode <E> arg)
+      {
+         next=arg;
+      }
+      public void setPrev(DLNode <E> arg)
+      {
+         prev=arg;
+      }
+      public DLNode <E> getNext()
+      {
+         return next;
+      }
+      public DLNode <E> getPrev()
+      {
+         return prev;
+      }
+      public E getValue()
+      {
+         return value;
+      }
+   }  // end of DLNode
+   
+   //  DLL class
+
+   private int size;
+   private DLNode <E> head = new DLNode <E> (); 
+   
+   public int size()
+   {
+      DLNode <E> curr = head;
+      size = 0;
+      while (curr != null)
+      {
+         curr = curr.getNext();
+         size++;
+      }
+      return size;
+   }
+   
+   public boolean add(E obj)
+   {
+      DLNode <E> temp = head;
+      if (size == 0)
+      {
+         head = new DLNode <E> (obj, null, null);
+         size++;
+         return true;
+      }
+      while (temp.getNext() != null)
+      {
+         temp = temp.getNext();
+      }
+      DLNode <E> add = new DLNode <E> (obj, temp, null);
+      temp.setNext(add); 
+      size++;
+      return true;
+      
+   }
+   
+   public void add(int index, E obj)
+   {
+      DLNode <E> temp = head;
+      int count = 0;
+      if (index == size) 
+      {
+         addLast(obj); 
+         return;
+      }
+      while (count != index)
+      {
+         count++;
+         temp = temp.getNext();
+      }
+      DLNode <E> prev = temp.getPrev();
+      DLNode <E> insert = new DLNode(obj, prev, temp);
+      prev.setNext(insert);
+      temp.setPrev(insert);
+      size++;
+   }
+   
+   public E get(int index)
+   {
+      DLNode <E> temp = head;
+      for (int i = 0; i < index; i++)
+      {
+         temp = temp.getNext();
+      }
+      return temp.getValue();
+   }
+   
+   public void set(int index, E obj)
+   {
+      DLNode <E> curr = head;
+      int i = 0;
+      while (i < index)
+      {
+         curr = curr.getNext();
+         i++;
+      } 
+      curr.setValue(obj); 
+   }
+  
+   public E remove(int index)
+   {
+      DLNode <E> curr = head;
+      for (int i = 0; i < index - 1; i++)
+      {
+         curr = curr.getNext();
+      }
+      E ret = curr.getNext().getValue(); //to be returned
+      curr.setNext(curr.getNext().getNext()); //skip next node
+      curr.getNext().setPrev(curr); //connect
+      size--;
+      return ret;
+   }
+  
+   public void addFirst(E obj)
+   {
+      DLNode <E> add = new DLNode<> (obj, null, head);
+      head = add;  
+      size++;
+   }
+   
+   public void addLast(E obj)
+   {
+      DLNode <E> add = new DLNode <> (obj, null, null); // node to be added
+      DLNode <E> curr = head;
+      if (size == 0) //must check if it's null
+      {
+         head = add;
+         size++;
+         return;
+      }
+      while (curr.next != null) //loop until the last node
+      {
+         curr = curr.getNext();
+      }
+      curr.setNext(add);
+      add.setPrev(curr);
+      size++;
+   }
+   public E getFirst()
+   {
+      return head.getValue();
+   }
+   public E getLast()
+   {
+      DLNode <E> curr = head;
+      while (curr.getNext() != null)
+      {
+         curr = curr.getNext();
+      }
+      return curr.getValue();
+   }
+   public E removeFirst()
+   {
+      E old = head.getValue();
+      head = head.getNext();
+      head.setPrev(null);
+      size--; 
+      return old;
+   }
+   public E removeLast()
+   {
+      DLNode <E> curr = head;
+      while (curr.getNext() != null)
+      {
+         curr = curr.getNext();
+      }
+      E ret = curr.getValue(); //to be returned
+      curr.setPrev(null); //disconnect
+      size--;
+      return ret;  
+   }
+   public String toString()
+   {
+      DLNode <E> curr = head;
+      String str = "";
+      while (curr.getNext() != null)
+      {
+         str += "" + curr.getValue() + "<-->";
+         curr = curr.getNext();
+      }
+      str += curr.getValue(); //the last node
+      return str;
+   }
+
+
