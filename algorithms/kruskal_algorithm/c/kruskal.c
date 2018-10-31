@@ -7,8 +7,9 @@ typedef struct Node{
     long long int weight;
 }Node;
 
-int id[100005], nodes, edges;
-Node p[100005];
+#define MAX 100005
+int id[MAX], nodes, edges;
+Node p[MAX];
 
 void initialize()
 {
