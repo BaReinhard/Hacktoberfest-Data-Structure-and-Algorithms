@@ -1,21 +1,18 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef long long int ll;
 typedef struct Node{
-    ll weight;
     int node1;
     int node2;
+    long long int weight;
 }Node;
 
-#define MAX 100005;
-
-int id[10005], nodes, edges;
-Node p[10005];
+int id[100005], nodes, edges;
+Node p[100005];
 
 void initialize()
 {
-    for(int i = 0;i < MAX;++i)
+    for(int i = 0;i < 100005; ++i)
         id[i] = i;
 }
 
@@ -36,10 +33,10 @@ void union_1(int x, int y)
     id[p] = id[q];
 }
 
-ll kruskal(Node p[])
+long long int kruskal(Node p[])
 {
     int x, y;
-    ll cost, minimumCost = 0;
+    long long int cost, minimumCost = 0;
     for(int i = 0;i < edges;++i)
     {
         cost = p[i].weight;
@@ -69,7 +66,7 @@ int comp(const void *p, const void *q)
 int main()
 {
     int x, y;
-    ll weight, cost, minCost;
+    long long int weight, cost, minCost;
     initialize();
     scanf("%d%d",&nodes,&edges);
     for(int i = 0;i < edges;++i)
