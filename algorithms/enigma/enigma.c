@@ -12,6 +12,9 @@ void enigma(int shift2, int enc){
     // get message to encode/decode
         printf("Enter the message:");
         size = getline(&msg, &size, stdin);
+
+            printf("Insert the inicial wheel position in latin alphabet:");
+
         shift = getc(stdin);
         shift = shift%26;
         while( i < (int)size-1 ){
