@@ -14,7 +14,7 @@
 //If the argument value is already equal to a mathematical integer, then the result is the same as the argument.
 //If the argument is NaN or an infinity or positive zero or negative zero, then the result is the same as the argument.
 
-//Code for this algorithm in java, a and b are the limits, t number of test cases:
+//Code for this algorithm in java, a and b are the limits, t number of cases:
 
 while(t-- > 0){
     int a = scan.nextInt();
