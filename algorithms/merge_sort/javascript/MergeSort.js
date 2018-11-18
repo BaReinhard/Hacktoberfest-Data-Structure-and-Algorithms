@@ -1,20 +1,20 @@
-var a = [34, 203, 3, 746, 200, 984, 198, 764, 9];
+let a = [34, 203, 3, 746, 200, 984, 198, 764, 9];
  
 function mergeSort(arr)
 {
     if (arr.length < 2)
         return arr;
  
-    var middle = parseInt(arr.length / 2);
-    var left   = arr.slice(0, middle);
-    var right  = arr.slice(middle, arr.length);
+    let middle = parseInt(arr.length / 2);
+    let left   = arr.slice(0, middle);
+    let right  = arr.slice(middle, arr.length);
  
     return merge(mergeSort(left), mergeSort(right));
 }
  
 function merge(left, right)
 {
-    var result = [];
+    let result = [];
  
     while (left.length && right.length) {
         if (left[0] <= right[0]) {
