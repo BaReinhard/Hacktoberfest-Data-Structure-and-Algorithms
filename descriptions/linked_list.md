@@ -1,5 +1,5 @@
 ## ELI5
-A linked list is a data structure made up of a bunch of little boxes that each hold a piece of information and directions to the next box. This makes it easy to make changes, because you don't have to move anything to a different box, you just have to give each box new directions. However, if you want the values in a certain box, you have to ask every box before it for directions to get there.
+A linked list is a data structure made up of a list of nodes, where each node contains it's own information plus the address of the next node.
 ### Pros
 * It's cheap to add and remove elements from a linked list.
 ### Cons
