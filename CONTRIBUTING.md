@@ -8,7 +8,7 @@ ex: /data_structures/char_stack/cpp/cstack.cpp
 ex: /algorithms/bubble_sort/cpp/bubble_sort.cpp
 ```
 
-## How To:
+## How to contribute to this repo:
 
 1. `git clone https://github.com/bareinhard/Hacktoberfest-Data-Structure-and-Algorithms`
 2. `git checkout -b <Your-Branch-Name-Here>`
