@@ -1,5 +1,5 @@
 ## ELI5
-Trie is an information re'trie'val data container.It's a tree useful in searching strings.
+Trie is an information re'trie'value data container. This data structure is best for strings operations, like finding prefix suffix, etc operations.
 USES:Autocomplete in text messages etc.
 ### Pros
 * Searching is easier and faster.
