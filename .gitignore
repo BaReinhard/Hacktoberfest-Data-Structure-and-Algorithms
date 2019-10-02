@@ -1,3 +1,4 @@
-*.out
+* .out
 javascript/node_modules
 .idea
+algorithms/kruskal/python/kruskal.py
