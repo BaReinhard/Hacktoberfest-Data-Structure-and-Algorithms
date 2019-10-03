@@ -26,4 +26,3 @@ public class Stack {
         return _top == -1;
     }
 }
-

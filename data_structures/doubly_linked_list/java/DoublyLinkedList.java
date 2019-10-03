@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 //Create a node class for creating new nodes in linked list
-class Node{
+class DoublyLinkedList{
 	
 	private int data ; // data of that node
 	private Node next ; // node data of next linked node
