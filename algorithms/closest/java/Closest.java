@@ -20,11 +20,12 @@ public class Closest {
         //sort the list
         Collections.sort(input);
         //initialize closest values, with the first two elements in the list
-        int closest = input.get(1)-input.get(0);
+        int closest = Integer.MAX_VALUE;
         //check all elements in the list
-        for(int i = 2; i < input.size(); i++) {
+        for(int i = 1; i < input.size(); i++) {
             //change closest if we find two elements with a shorter distance.
-            closest = Math.min(closest, input.get(i)-input.get(i-1));
+            temp = Math.abs(input.get(i)-input.get(i-1));
+            closest = Math.min(closest, temp);
         }
         //print the shortest distance
         System.out.println(closest);
