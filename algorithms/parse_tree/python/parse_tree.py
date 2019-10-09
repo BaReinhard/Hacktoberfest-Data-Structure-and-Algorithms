@@ -12,7 +12,7 @@ class Stack:
          return self.items.pop()
 
      def peek(self):
-         return self.items[len(self.items)-1]
+         return self.items[-1]
 
      def size(self):
          return len(self.items)
@@ -59,16 +59,18 @@ def buildParseTree(fpexp):
     eTree = BinaryTree('')
     pStack.push(eTree)
     currentTree = eTree
+    operators_and_paren = {'+', '-', '*', '/', ')'}
+    operators = {'+', '-', '*', '/'}
     for i in fplist:
         if i == '(':
             currentTree.insertLeft('')
             pStack.push(currentTree)
             currentTree = currentTree.getLeftChild()
-        elif i not in ['+', '-', '*', '/', ')']:
+        elif i not in operators_and_paren:
             currentTree.setRootVal(int(i))
             parent = pStack.pop()
             currentTree = parent
-        elif i in ['+', '-', '*', '/']:
+        elif i in operators:
             currentTree.setRootVal(i)
             currentTree.insertRight('')
             pStack.push(currentTree)
