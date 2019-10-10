@@ -2,7 +2,7 @@
 #include<conio.h>
 using namespace std;
 
-class queue1
+class queue1// a random comment
 {
 
     int n=8,front1=-1,rear=-1,a=0;
