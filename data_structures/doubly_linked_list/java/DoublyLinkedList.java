@@ -81,7 +81,7 @@ class Node{
 			}
 			
 		}
-		
+		//class for inserting the node at the end of list
 		public void addAtEnd(int data) {
 			
 			Node node = new Node(data);
