@@ -6,10 +6,10 @@ class BinarySearch
 		if(ar.length == 0) {
     		return -1;
     	}
-		
+
         if (r >= l){
             int mid = l + (r - l) / 2;
-            // If the search is present at the mid postion
+            // If the search is present at the mid position
             if (ar[mid] == x){
                return mid;
             }
