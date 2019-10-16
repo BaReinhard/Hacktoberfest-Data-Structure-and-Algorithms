@@ -2,14 +2,11 @@
 **Implementing new File/Directory Structure**
 * Try to keep things as modular as possible, the new file/directory structure should be: 
 ```
-/data_structures/general_structure/structure/language/file
-ex: /data_structures/stack/char_stack/cpp/cstack/cstack.cpp cstack.h cstack.usage.cpp
-/algorithms/general_algorithm/algorithm/language/file
-ex: /algorithms/sort/bubble_sort/cpp/bubble_sort.cpp
+/data_structures/structure/language/file
+ex: /data_structures/char_stack/cpp/cstack.cpp
+/algorithms/algorithm/language/file
+ex: /algorithms/bubble_sort/cpp/bubble_sort.cpp
 ```
-
-**Old Directory Structure**
-* Try to keep things as modular as possible, for example if you are creating a LinkedList data structure for cpp, if there isn't a directory already created on the root of the directory named 'cpp' then create one, inside that directory create another folder called 'linkedlist', then create your file(s) inside the linkedlist folder.
 
 ## How To:
 

@@ -1,0 +1,23 @@
+{
+  "name": "hacktoberfest-data-structure-and-algorithms",
+  "version": "1.0.0",
+  "description": "A Repository Containing Algorithms and Data Structures in all languages",
+  "main": "README.md",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bareinhard/Hacktoberfest-Data-Structure-and-Algorithms.git"
+  },
+  "author": "Brett Reinhard <brett@reinhards.us> (http://brettreinhard.com)",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/bareinhard/Hacktoberfest-Data-Structure-and-Algorithms/issues"
+  },
+  "homepage": "https://github.com/bareinhard/Hacktoberfest-Data-Structure-and-Algorithms#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.0"
+  }
+}

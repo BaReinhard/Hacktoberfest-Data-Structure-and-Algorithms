@@ -1,0 +1,20 @@
+(define (make-stack)
+
+  (define arr '())
+  (define length 0)
+  (define temp '())
+
+  (define (size)
+    length)
+
+  (define (pop)
+    (set! temp (car arr))
+    (set! arr (cons arr))
+    temp)
+
+  (define (dispatch method)
+    (cond ((eq? method 'size) size)
+          ((eq? method 'pop) pop)
+          (else (lambda() (display "Unknown Stack Request")(display method)(newline)))))
+
+  dispatch)
