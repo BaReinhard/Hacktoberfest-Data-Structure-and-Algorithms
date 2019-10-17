@@ -5,16 +5,16 @@
 import java.util.*;
 
 /*  Class arrayQueue  */
-class arrayQueue {
-    protected int Queue[] ;
+class ArrayQueue<T> {
+    protected T queue[] ;
     protected int front, rear, size, len;
 
     /* Constructor */
-    public arrayQueue(int n)
+    public ArrayQueue(int n)
     {
         size = n;
         len = 0;
-        Queue = new int[size];
+        queue = new T[size];
         front = -1;
         rear = -1;
     }
@@ -34,36 +34,36 @@ class arrayQueue {
         return len ;
     }
     /*  Function to check the front element of the queue */
-    public int peek()
+    public T peek()
     {
         if (isEmpty())
             throw new NoSuchElementException("Underflow Exception");
-        return Queue[front];
+        return queue[front];
     }
     /*  Function to insert an element to the queue */
-    public void insert(int i)
+    public void insert(T i)
     {
         if (rear == -1)
         {
             front = 0;
             rear = 0;
-            Queue[rear] = i;
+            queue[rear] = i;
         }
         else if (rear + 1 >= size)
             throw new IndexOutOfBoundsException("Overflow Exception");
         else if ( rear + 1 < size)
-            Queue[++rear] = i;
+            queue[++rear] = i;
         len++ ;
     }
     /*  Function to remove front element from the queue */
-    public int remove()
+    public T remove()
     {
         if (isEmpty())
             throw new NoSuchElementException("Underflow Exception");
         else
         {
             len-- ;
-            int ele = Queue[front];
+            int ele = queue[front];
             if ( front == rear)
             {
                 front = -1;
@@ -84,7 +84,7 @@ class arrayQueue {
             return ;
         }
         for (int i = front; i <= rear; i++)
-            System.out.print(Queue[i]+" ");
+            System.out.print(queue[i]+" ");
         System.out.println();
     }
 }
