@@ -3,7 +3,7 @@ A repository containing data structures and algorithms, regardless of language.
 
 ***Not Affiliated with Digital Ocean or Hacktoberfest***
 
-![Hacktoberfest](https://pbs.twimg.com/media/Dn4njsBXkAEQWZs.jpg)
+![Hacktoberfest](https://miro.medium.com/max/2561/1*IDS2jxGIH8KydqWa8AD5Zw.png)
 
 # CONTRIBUTING!
 
