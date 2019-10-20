@@ -1,6 +1,5 @@
 {
   "files.associations": {
     "vector": "cpp"
-  },
-  "python.pythonPath": "/usr/bin/python3"
+  }
 }
