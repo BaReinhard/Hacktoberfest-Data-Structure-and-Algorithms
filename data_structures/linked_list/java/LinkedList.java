@@ -1,4 +1,4 @@
-*
+/*
  *  Java Program to Implement Singly Linked List
  */
  
@@ -181,6 +181,21 @@ class linkedList
         }
         System.out.print(ptr.getData()+ "\n");
     }
+
+    public void displayAtPosition(int pos){
+
+        Node ptr = start;
+        pos = pos - 1;
+        for (int i = 1; i < size; i++) 
+        {
+            if (i == pos) 
+            {
+                System.out.println("Position #"+i+" = "+ptr.getData());
+                break;
+            }
+            ptr = ptr.getLink();
+        }
+    }
 }
  
 /*  Class SinglyLinkedList  */
@@ -203,7 +218,8 @@ public class SinglyLinkedList
             System.out.println("3. insert at position");
             System.out.println("4. delete at position");
             System.out.println("5. check empty");
-            System.out.println("6. get size");            
+            System.out.println("6. get size");    
+            System.out.println("7. get the data at position");            
             
             int choice = scan.nextInt();            
             switch (choice)
@@ -242,7 +258,16 @@ public class SinglyLinkedList
                 break;                   
             case 6 : 
                 System.out.println("Size = "+ list.getSize() +" \n");
-                break;                         
+                break; 
+            case 7 : 
+                System.out.println("Enter position");
+                int position = scan.nextInt() ;
+                
+                if (pos <= 1 || pos > list.getSize())
+                    System.out.println("Invalid position\n");
+                else
+                    list.displayAtPosition(position);
+                break;                               
              default : 
                 System.out.println("Wrong Entry \n ");
                 break;   
