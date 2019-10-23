@@ -131,9 +131,7 @@ public class PrimMST {
                     }
                 }
             }
-
         }
-
         return true;
     }
 
@@ -151,6 +149,4 @@ public class PrimMST {
         }
         StdOut.printf("%.5f\n", mst.weight());
     }
-
-
 }
