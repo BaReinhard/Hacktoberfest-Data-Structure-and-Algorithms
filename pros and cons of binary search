@@ -1,0 +1,12 @@
+Advantages:
+
+Compared to linear search (checking each element in the array starting from the first), binary search is much faster. Linear search takes, on average N/2 comparisons (where N is the number of elements in the array), and worst case N comparisons. Binary search takes an average and worst-case log2(N) comparisons. So for a million elements, linear search would take an average of 500,000 comparisons, whereas binary search would take 20.
+It’s a fairly simple algorithm, though people get it wrong all the time.
+It’s well known and often implemented for you as a library routine.
+Disadvantages:
+
+It’s more complicated than linear search, and is overkill for very small numbers of elements.
+It works only on lists that are sorted and kept sorted. That is not always feasable, especially if elements are constantly being added to the list.
+It works only on element types for which there exists a less-than relationship. Some types simply cannot be sorted (though this is rare).
+There is a great lost of efficiency if the list does not support random-access. You need, for example, to immediately jump to the middle of the list. If your list is a plain array, that’s great. If it’s a linked-list, not so much. Depending on the cost of your comparison operation, the cost of traversing a non-random-access list could dwarf the cost of the comparisons.
+There are even faster search methods available, such as hash lookups. However a hash lookup requires the elements to be organized in a much more complicated data structure (a hash table, not a list).
