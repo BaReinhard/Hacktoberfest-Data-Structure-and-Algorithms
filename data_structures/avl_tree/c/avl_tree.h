@@ -1,5 +1,5 @@
-#ifndef TREE_H
-#define TREE_H
+#ifndef AVL_TREE_H
+#define AVL_TREE_H
 
 //tree node structure
 typedef struct tlnode {
