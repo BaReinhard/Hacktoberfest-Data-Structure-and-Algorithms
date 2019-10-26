@@ -2,10 +2,10 @@ import java.util.*;
 class hashset {
 
    public static void main(String args[]) {
-      // Create a tree set
+      // Create a hash set
       HashSet hs = new HashSet();
      
-      // Add elements to the tree set
+      // Add elements to the hash set
       hs.add(3);
       hs.add(2);
       hs.add(3);
