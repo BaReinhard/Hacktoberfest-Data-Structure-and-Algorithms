@@ -17,6 +17,7 @@ int main() {
 
     pre_order(root);
     fprintf(stdout, "\n");
+
     root = delete(root, 9);
     pre_order(root);
     fprintf(stdout,"\n");
