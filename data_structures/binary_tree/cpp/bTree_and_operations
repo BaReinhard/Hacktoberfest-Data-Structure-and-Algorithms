@@ -1,0 +1,362 @@
+#include <iostream>
+
+/**
+ * @author Diogo Neiss
+ * @date October 2019
+ * All the documentation is written in portuguese, with the main() function itself translated to english. 
+ * 
+ * The code adds, removes and prints elements on a binary tree.
+ */
+
+
+
+
+/*
+	Desabilita ou habilita todas os printfs, que só servem pra debug no código. O define substitui todos antes da compilacao e substitui pela versao comentada.
+	Para mostrar as flags de debug, basta retirar o // antes de printf
+	Como estou em c++, só uso std::cout dentro do codigo
+*/
+#define printf //printf
+
+class No
+{
+
+public:
+	int elemento;  // Conteudo do no.
+	No *esq, *dir; // Filhos da esq e dir.
+
+	/**
+	 * Construtor da classe.
+	 * @param elemento Conteudo do no.
+	 */
+	No(int elemento)
+	{
+		//No(elemento, NULL, NULL);
+		this->elemento = elemento;
+		this->dir = NULL;
+		this->esq = NULL;
+	}
+
+	/**
+	 * Construtor da classe.
+	 * @param elemento Conteudo do no.
+	 * @param esq No da esquerda.
+	 * @param dir No da direita.
+	 */
+	No(int elemento, No *esq, No *dir)
+	{
+		this->elemento = elemento;
+		this->esq = esq;
+		this->dir = dir;
+	}
+	No()
+	{
+		printf("No vazio criado! Cuidado.\n");
+	}
+};
+
+/**
+ * Arvore binaria de pesquisa
+ * @author Max do Val Machado
+ */
+class BinaryTree
+{
+private:
+	No *raiz; // Raiz da arvore.
+
+	/**
+	 * Construtor da classe.
+	 */
+public:
+	BinaryTree()
+	{
+		raiz = NULL;
+	}
+
+	/**
+	 * Metodo publico iterativo para pesquisar elemento.
+	 * @param x Elemento que sera procurado.
+	 * @return <code>true</code> se o elemento existir,
+	 * <code>false</code> em caso contrario.
+	 */
+public:
+	bool pesquisar(int x)
+	{
+		return pesquisar(x, raiz);
+	}
+
+	/**
+	 * Metodo privado recursivo para pesquisar elemento.
+	 * @param x Elemento que sera procurado.
+	 * @param i No em analise.
+	 * @return <code>true</code> se o elemento existir,
+	 * <code>false</code> em caso contrario.
+	 */
+private:
+	bool pesquisar(int x, No *i)
+	{
+		bool resp;
+		if (i == NULL)
+		{
+			resp = false;
+		}
+		else if (x == i->elemento)
+		{
+			resp = true;
+		}
+		else if (x < i->elemento)
+		{
+			resp = pesquisar(x, i->esq);
+		}
+		else
+		{
+			resp = pesquisar(x, i->dir);
+		}
+		return resp;
+	}
+
+	/**
+	 * Metodo publico iterativo para exibir elementos.
+	 */
+public:
+	void mostrarCentral()
+	{
+		std::cout << ("[");
+		mostrarCentral(raiz);
+		std::cout << (" ]") << std::endl;
+	}
+
+	/**
+	 * Metodo privado recursivo para exibir elementos.
+	 * @param i No em analise.
+	 */
+private:
+	void mostrarCentral(No *i)
+	{
+		if (i != NULL)
+		{
+			mostrarCentral(i->esq);		// Elementos da esquerda.
+			std::cout << "  " << i->elemento; // Conteudo do no.
+			mostrarCentral(i->dir);		// Elementos da direita.
+		}
+	}
+
+	/**
+	 * Metodo publico iterativo para exibir elementos.
+	 */
+public:
+	void mostrarPre()
+	{
+		std::cout << "[";
+		mostrarPre(raiz);
+		std::cout << " ]" << std::endl;
+	}
+
+	/**
+	 * Metodo privado recursivo para exibir elementos.
+	 * @param i No em analise.
+	 */
+private:
+	void mostrarPre(No *i)
+	{
+		if (i != NULL)
+		{
+			std::cout << " " << i->elemento; // Conteudo do no.
+			mostrarPre(i->esq);				 // Elementos da esquerda.
+			mostrarPre(i->dir);				 // Elementos da direita.
+		}
+	}
+
+	/**
+	 * Metodo publico iterativo para exibir elementos.
+	 */
+public:
+	void mostrarPos()
+	{
+		std::cout << "[";
+		mostrarPos(raiz);
+		std::cout << " ]" << std::endl;
+	}
+
+	/**
+	 * Metodo privado recursivo para exibir elementos.
+	 * @param i No em analise.
+	 */
+private:
+	void mostrarPos(No *i)
+	{
+		if (i != NULL)
+		{
+			mostrarPos(i->esq);				 // Elementos da esquerda.
+			mostrarPos(i->dir);				 // Elementos da direita.
+			std::cout << " " << i->elemento; // Conteudo do no.
+		}
+	}
+
+	/**
+	 * Metodo publico iterativo para inserir elemento.
+	 * @param x Elemento a ser inserido.
+	 * @throws Exception Se o elemento já existir.
+	 */
+public:
+	void inserir(int &x)
+	{
+		raiz = inserir(x, raiz);
+	}
+
+	/**
+	 * Metodo privado recursivo para inserir elemento.
+	 * @param x Elemento a ser inserido.
+	 * @param i No em analise.
+	 * @return No em analise, alterado ou nao.
+	 * @throws Exception Se o elemento existir.
+	 */
+private:
+	No *inserir(int& x, No *i)
+	{
+
+		if (i == NULL)
+		{
+			//printf("Elemento recebido: %d.\n", x);
+			i = new No(x);
+			// PROBLEMA NA LINHA ACIMA
+			printf("Elemento alocado dentro da função inserir no Nó: %d\n", i->elemento);
+		}
+		else if (x < i->elemento)
+		{
+			i->esq = inserir(x, i->esq);
+		}
+		else if (x > i->elemento)
+		{
+			i->dir = inserir(x, i->dir);
+		}
+		else
+		{
+			std::cout << "Error inserting! Element already on tree: " << x << std::endl;
+			//exit(1);
+		}
+
+		return i;
+	}
+
+	/**
+	 * Metodo publico iterativo para remover elemento.
+	 * @param x Elemento a ser removido.
+	 * @throws Exception Se nao encontrar elemento.
+	 */
+public:
+	void remover(int &x)
+	{
+		raiz = remover(x, raiz);
+	}
+
+	/**
+	 * Metodo privado recursivo para remover elemento.
+	 * @param x Elemento a ser removido.
+	 * @param i No em analise.
+	 * @return No em analise, alterado ou nao.
+	 * @throws Exception Se nao encontrar elemento.
+	 */
+
+private:
+	No *remover(int x, No *i)
+	{
+
+		if (i == NULL)
+		{
+			std::cout << "Error removing! Element that doesn't exist: " << x << std::endl;
+			//exit(1);
+		}
+		//ir pra esquerda
+		else if (x < i->elemento)
+		{
+			i->esq = remover(x, i->esq);
+		}
+		//ir pra direita
+		else if (x > i->elemento)
+		{
+			i->dir = remover(x, i->dir);
+
+			// Sem no a direita.
+		}
+		else if (i->dir == NULL)
+		{
+			i = i->esq;
+
+			// Sem no a esquerda.
+		}
+		else if (i->esq == NULL)
+		{
+			i = i->dir;
+
+			// No a esquerda e no a direita.
+		}
+		else
+		{
+			i->esq = antecessor(i, i->esq);
+		}
+
+		return i;
+	}
+
+	/**
+	 * Metodo para trocar no removido pelo antecessor.
+	 * @param i No que teve o elemento removido.
+	 * @param j No da subarvore esquerda.
+	 * @return No em analise, alterado ou nao.
+	 */
+	No *antecessor(No *i, No *j)
+	{
+
+		// Existe no a direita.
+		if (j->dir != NULL)
+		{
+			// Caminha para direita.
+			j->dir = antecessor(i, j->dir);
+
+			// Encontrou o maximo da subarvore esquerda.
+		}
+		else
+		{
+			i->elemento = j->elemento; // Substitui i por j.
+			j = j->esq;				   // Substitui j por j.ESQ.
+		}
+		return j;
+	}
+};
+int main()
+{
+	BinaryTree *createdTree = new BinaryTree();
+
+	int insertedElement;
+
+	std::cout << ("Insert number to be inserted on tree: ");
+	std::cin >> insertedElement;
+	while(insertedElement != -1){
+			
+		createdTree->inserir(insertedElement);
+		
+		createdTree->mostrarCentral();
+		std::cout << ("If you want to stop, enter -1.") << std::endl;
+		std::cout << ("Insert number to be inserted on tree: ");
+		std::cin >> insertedElement;
+	}
+	std::cout << "Insertions ended. Final tree: " << std::endl;
+	createdTree->mostrarCentral();
+
+	int removedElement;
+	std::cout << ("Insert number to be removed from tree: ");
+	std::cin >> removedElement;
+
+	while(removedElement != -1){
+		
+		createdTree->remover(removedElement);
+		
+		createdTree->mostrarCentral();
+		std::cout << ("If you want to stop, enter -1.") << std::endl;
+		std::cout << ("Insert number to be removed from tree ");
+		std::cin >> removedElement;
+	}
+
+	std::cout << "Fim do programa." << std::endl;
+}
