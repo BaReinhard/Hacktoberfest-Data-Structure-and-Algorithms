@@ -1,6 +1,10 @@
+
+//imports
 #include <iostream>
 using namespace std;
 
+
+//function returns the index of the query element if not found returns -1
 int linearSearch(int* arr, int size, int num){
   for(int i = 0; i < size; i++){
     if(arr[i] == num){
