@@ -7,7 +7,7 @@
   
 
 
-
+//function takes array and its size as input and sorts using bubble sort
 void bubbleSort(int arr[], int n)
 {
    int i, j;
@@ -19,6 +19,8 @@ void bubbleSort(int arr[], int n)
               swap(&arr[j], &arr[j+1]);
 }
 
+
+//main function
 int main()
 {
 int i,j,k;
