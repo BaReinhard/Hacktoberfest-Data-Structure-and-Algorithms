@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
-# define max 5
+int max;
+printf("Enter size\n");
+scanf("%d",&max);
 int queue[max];
 int f=0,r=-1;
 int count=0;
