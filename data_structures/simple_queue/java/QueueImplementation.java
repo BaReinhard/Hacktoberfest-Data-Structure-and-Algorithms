@@ -11,7 +11,7 @@ public class QueueImplementation
         System.out.println("Enter Size of Integer Queue ");
         int n = scan.nextInt();
         /* creating object of class arrayQueue */
-        arrayQueue q = new arrayQueue(n);        
+        ArrayQueue<Integer> q = new ArrayQueue(n);
         /* Perform Queue Operations */
         char ch;
         do{
