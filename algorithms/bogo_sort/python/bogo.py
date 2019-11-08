@@ -1,5 +1,5 @@
 from random import *
-
+#seed for random
 seed()
 x = []
 for i in range(0, 10):
