@@ -4,6 +4,7 @@
 using namespace std;
 
 //class for graph , easily customisable 
+//no need of class
 class graph
 {
 	int vertices;
