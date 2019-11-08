@@ -7,7 +7,7 @@ A repository containing data structures and algorithms, regardless of language.
 
 # CONTRIBUTING!
 
-# Contributing to this repo
+# How to contribute to this repo:
 **Implementing new File/Directory Structure**
 * Try to keep things as modular as possible, the new file/directory structure should be:
 ```
