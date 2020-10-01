@@ -1,0 +1,89 @@
+#include <bits/stdc++.h>
+using namespace std;
+ 
+#define IOS ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
+#define endl "\n"
+#define int long long
+#define pb push_back
+#define pf push_front
+
+//Sorting the graph topologically using bfs
+
+class Graph
+{
+   list<int> *l;
+   int v;
+   public:
+
+   Graph(int v)
+   {
+       this->v =v;
+       l = new list<int>[v];
+   }
+
+   void addEdge(int x, int y)
+   {
+       l[x].pb(y);
+   }
+
+   void topo_bfs()
+   {
+       int *indegree = new int[v];
+       for(int i=0; i<v; i++)
+       {
+           indegree[i]=0;
+       }
+
+       for(int i = 0 ; i<v; i++)
+       {
+           for(auto y: l[i])
+           {
+               indegree[y]++;
+           }
+       }
+
+       queue<int> q;
+       //let's first push the nodes in queue which are independent of any other node
+       for(int i=0; i<v; i++)
+       {
+           if(indegree[i]==0)
+           {
+               q.push(i);
+           }
+       }
+       
+       while(!q.empty())
+       {
+           int node = q.front();
+           cout<<node<<" ";
+           q.pop();
+           for(auto nbrs: l[node])
+           {
+               indegree[nbrs]--;
+               if(indegree[nbrs]==0)
+               {
+                   q.push(nbrs);
+               }
+           }
+       }
+   }
+
+};
+
+int32_t main()
+{
+  IOS;
+  Graph g(6);
+  g.addEdge(0,2);
+  g.addEdge(1,2);
+  g.addEdge(1,4);
+  g.addEdge(2,3);
+  g.addEdge(2,5);
+  g.addEdge(4,5);
+  g.addEdge(3,5);
+  g.topo_bfs();
+
+  
+  return 0;
+}
+
