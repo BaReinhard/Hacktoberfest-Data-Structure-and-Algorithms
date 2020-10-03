@@ -1,0 +1,537 @@
+[33mcommit 4a0f8a100a4f7b43b153a38cc49827f141312e1e[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/abhi[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Abhishek <prajapatia2580.com>
+Date:   Fri Oct 2 11:57:21 2020 -0700
+
+    Added fibonacci in python
+
+[33mcommit 51b603532243484eac867d2a7da6cd6792054798[m
+Merge: 4327408 a330fa8
+Author: Mohammad Sameer <mhdsmr2@gmail.com>
+Date:   Thu Oct 17 01:00:21 2019 +0530
+
+    Merge pull request #836 from d4nielhdz/master
+    
+    Implement MinHeap in C++
+
+[33mcommit a330fa84590c3bb355ef960375dbe5660fb6d8b7[m
+Author: Daniel Hernández <josephdzr@gmail.com>
+Date:   Fri Oct 11 14:17:10 2019 -0500
+
+    Implemented MinHeap in C++
+
+[33mcommit 43274082be866d145e06c11cd663f2b28247b040[m
+Merge: a01f77d e77f998
+Author: Mohammad Sameer <mhdsmr2@gmail.com>
+Date:   Thu Oct 18 13:14:09 2018 +0530
+
+    Euclid's Algorithm Implemented in C (#604)
+    
+    Add Euclid's Algorithm in C
+
+[33mcommit a01f77d973e5080e253997bf2b77bc3e50ffdf0d[m
+Merge: 64ebabc bcf5c56
+Author: Mohammad Sameer <mhdsmr2@gmail.com>
+Date:   Thu Oct 18 13:11:04 2018 +0530
+
+    Merge pull request #643 from fasinha/master
+    
+    Update DoublyLinkedList.java
+
+[33mcommit 64ebabca81afeaa2dbf0932d8f62173332ba0941[m
+Merge: 6852992 6e1da1f
+Author: Mohammad Sameer <mhdsmr2@gmail.com>
+Date:   Thu Oct 18 13:10:00 2018 +0530
+
+    Merge pull request #644 from ppubudu4/master
+    
+    Add Bubble Sort Algorithm in Perl
+
+[33mcommit 6e1da1f46437a3a0628113a26a9aebe0a3c18cea[m
+Author: Pubudu Dananjaya <ppubudu4@gmail.com>
+Date:   Thu Oct 18 04:32:24 2018 +0530
+
+    Created bubble sort in perl
+
+[33mcommit bcf5c56c1a9072356b5a21e02959fa3799b572bb[m
+Author: fasinha <31450444+fasinha@users.noreply.github.com>
+Date:   Wed Oct 17 12:45:27 2018 -0400
+
+    Update DoublyLinkedList.java
+
+[33mcommit 6852992310dc158b26d4af86a4032330f4e9996c[m
+Merge: c5069ad c6d6068
+Author: Mohammad Sameer <mhdsmr2@gmail.com>
+Date:   Wed Oct 17 18:31:55 2018 +0530
+
+    Merge pull request #631 from raghunanj/master
+    
+    Add Union Find Data Structure in Python
+    Add an Algorithm to find the number of connected components in an undirected graph in Python
+
+[33mcommit c6d60682a44963f70534e67cf09a02f0a826d483[m
+Author: raghunanj <kothvariraghu@gmail.com>
+Date:   Mon Oct 15 18:33:51 2018 -0400
+
+     Union find DS in python and an example graph algorithm in python
+
+[33mcommit c5069ada84c4ee4cd71fae996d0c123b8b3d20d8[m
+Merge: 1b18354 b2cf824
+Author: Mohammad Sameer <mhdsmr2@gmail.com>
+Date:   Thu Oct 11 04:13:20 2018 +0530
+
+    Merge pull request #597 from vishal-pouras/master
+    
+    Add Anagrams finding algorithm in C++
+
+[33mcommit 1b18354cf8986ea4a1b9336954dc69e65f69d8db[m
+Merge: a96366c 2bc1fb3
+Author: Mohammad Sameer <mhdsmr2@gmail.com>
+Date:   Thu Oct 11 04:11:13 2018 +0530
+
+    Merge pull request #602 from udemiko/patch-1
+    
+    Add algorithm to get an element on a specific index in the Fibonacci sequence in C++
+
+[33mcommit a96366c6b5f587f7e79f8173e9c31deb65cb5e09[m
+Merge: 135d156 dfa4fee
+Author: Mohammad Sameer <mhdsmr2@gmail.com>
+Date:   Thu Oct 11 04:07:54 2018 +0530
+
+    Merge pull request #607 from F-Zee/patch-1
+    
+    Add Optimised Permutation bitwise algorithm in Java
+
+[33mcommit 135d156599e7287d9399d2d33c51af6bcef7050b[m
+Merge: 8b06699 7d2375f
+Author: Mohammad Sameer <mhdsmr2@gmail.com>
+Date:   Thu Oct 11 04:05:49 2018 +0530
+
+    Merge pull request #600 from Lashuk1729/master
+    
+    Add Radix Sort algorithm in C++
+    Add Shell Sort algorithm in C
+
+[33mcommit 8b06699993a44738b2fda6b0f19fc22b6c1d68e5[m
+Merge: bc499bc f2313b1
+Author: Mohammad Sameer <mhdsmr2@gmail.com>
+Date:   Thu Oct 11 03:54:07 2018 +0530
+
+    Merge pull request #606 from sushmak02/master
+    
+    Add Binary Search algorithm in PHP
+
+[33mcommit bc499bcf5161a34d1897ec69db335c003f0283cb[m
+Merge: a28001d 90c6a2a
+Author: Mohammad Sameer <mhdsmr2@gmail.com>
+Date:   Thu Oct 11 03:38:39 2018 +0530
+
+    Merge pull request #609 from TomerPacific/feature/MovingExplanations
+    
+    Move descriptions of Algorithms and DSs with their respective code from description folder
+    Remove description folder
+
+[33mcommit 90c6a2a71d330d14a6f6958265684bfe47ba4caa[m
+Author: Tomer Ben Rachel <tomerpacific@gmail.com>
+Date:   Wed Oct 10 22:37:09 2018 +0300
+
+    Moving descriptions to correct places and removing descriptions directory
+
+[33mcommit dfa4feeb84e6c0c39355fd93073e46a5ca5a68cd[m
+Author: Zee <44004976+F-Zee@users.noreply.github.com>
+Date:   Wed Oct 10 19:51:12 2018 +0200
+
+    Create Optimized_permutation
+
+[33mcommit f2313b1f52770b35b36b293972450e561a349724[m
+Author: sushma <sushmak@bsf.io>
+Date:   Wed Oct 10 19:58:38 2018 +0530
+
+    Binary Serach in PHP
+
+[33mcommit e77f998a0ef313e50b87e0ce06ad31ef371d5b4c[m
+Author: Aditya Jeswani <adit98@gmail.com>
+Date:   Wed Oct 10 08:25:56 2018 +0530
+
+    Euclid's Algorithm in C formatting
+
+[33mcommit 648ee4e1239548c969d4dd440dc6063d29f90ca7[m
+Author: Aditya Jeswani <adit98@gmail.com>
+Date:   Wed Oct 10 08:24:05 2018 +0530
+
+    Euclid's Algorithm in C
+
+[33mcommit a28001daeb674281cb7f519881ae9586577ba7cd[m
+Merge: ae7c9c4 b75373e
+Author: Mohammad Sameer <mhdsmr2@gmail.com>
+Date:   Wed Oct 10 04:40:25 2018 +0530
+
+    Merge pull request #598 from ervaibhavkumar/patch-2
+    
+    Create a program to check whether a string is a palindrome or not in C.
+
+[33mcommit 2bc1fb399870e3f1afbf8aa3087ec80db735c0c7[m
+Author: udemiko <umikaze@protonmail.ch>
+Date:   Tue Oct 9 21:04:17 2018 +0200
+
+    Get a specific index of the fibonacci sequence
+
+[33mcommit 7d2375fa40cee8ffb730b25e1b96095368193fa4[m
+Author: Lashuk1729 <kushal.b15@iiits.in>
+Date:   Tue Oct 9 23:52:24 2018 +0530
+
+    Added C++ file for Radix Sort and C file for Shell Sort
+
+[33mcommit b75373e2021638d3d14414ebfa811fd746e529b0[m
+Author: Vaibhav <vk530873@gmail.com>
+Date:   Tue Oct 9 10:18:05 2018 +0530
+
+    Create checkPalindrome.c
+
+[33mcommit b2cf824126e93ca3c108542e35260df7e643b94a[m
+Author: vishal-pouras <vishalpouras@gmail.com>
+Date:   Tue Oct 9 02:01:47 2018 +0530
+
+    Created anagrams.cpp file in algorithms/strings/cpp
+
+[33mcommit ae7c9c42f4311c638ab3b7dc68facb819d3259f3[m
+Merge: 03db006 1cd76be
+Author: Mohammad Sameer <mhdsmr2@gmail.com>
+Date:   Tue Oct 9 01:16:52 2018 +0530
+
+    Merge pull request #583 from ervaibhavkumar/patch-1
+    
+    Add algorithm for mirroring a tree in C++
+
+[33mcommit 03db006566f2eeafe3f77bd2e9d8349fd394ee07[m
+Merge: 8a30f61 3830915
+Author: Mohammad Sameer <mhdsmr2@gmail.com>
+Date:   Mon Oct 8 02:49:29 2018 +0530
+
+    Merge pull request #564 from hacker-1/master
+    
+    Grammatical mistakes in README
+
+[33mcommit 1cd76be0567825d741c20ba673219a6868e578d4[m
+Author: Vaibhav <vk530873@gmail.com>
+Date:   Sun Oct 7 11:30:30 2018 +0530
+
+    Create mirror.cpp
+
+[33mcommit 38309156fa6cb9d488d0fdae941256fe32cc53c9[m
+Author: hacker-1 <43872950+hacker-1@users.noreply.github.com>
+Date:   Fri Oct 5 12:17:05 2018 +0530
+
+    README Grammar Correction
+
+[33mcommit 8a30f619cea12f2a972107cb7ece6ab72f855d50[m
+Merge: 72204fb e0084e6
+Author: Mohammad Sameer <mhdsmr2@gmail.com>
+Date:   Mon Oct 1 23:24:09 2018 +0530
+
+    Merge pull request #497 from m-sameer/master
+    
+    Fix the disappearance of the Hacktober poster in the README
+
+[33mcommit e0084e63a9999abdca3e9620fe5c3ddc7d7fd89f[m
+Author: Mohammad Sameer <mhdsmr2@gmail.com>
+Date:   Mon Oct 1 23:07:03 2018 +0530
+
+    Fix the disappearance of the Hacktober poster in the README
+
+[33mcommit 72204fb6aabd66aa3b95094135e05e5a7afc58b7[m
+Merge: 220f7f7 69d4c16
+Author: Brett Reinhard <brettreinhard@gmail.com>
+Date:   Sun Feb 4 20:57:04 2018 -0800
+
+    Merge pull request #488 from EthannYakabuski/master
+    
+    stack: added lisp implementation
+
+[33mcommit 69d4c16f83e41c9bd0dc0a6a821bbde530975c61[m
+Author: Ethann Yakabuski <ethannyakabuski@cmail.carleton.ca>
+Date:   Sat Jan 27 11:33:24 2018 -0800
+
+    Stack: added comments
+
+[33mcommit 8e734905d43ef27d7f59dec596ef39fd85bf348f[m
+Author: Ethann Yakabuski <ethannyakabuski@cmail.carleton.ca>
+Date:   Sat Jan 27 11:29:37 2018 -0800
+
+    Stack: tested and bounds checked
+
+[33mcommit a8793eb1348a7dee7fd326fdd0b54cdca20d7c20[m
+Author: Ethann Yakabuski <ethannyakabuski@cmail.carleton.ca>
+Date:   Sat Jan 27 11:09:45 2018 -0800
+
+    stack: added lisp implementation
+
+[33mcommit 220f7f703b00b0a97e9a4786f4ae1c1e2c999f83[m
+Merge: 3d8c24a 878357a
+Author: Mohammad Sameer <mhdsmr2@gmail.com>
+Date:   Tue Dec 5 22:25:40 2017 +0530
+
+    Merge pull request #217 from Emerald-Jayde/circ-queue-py
+    
+    Implementation of Circular Queue in Python
+
+[33mcommit 3d8c24a8454abd73147cbb2e86c5c9e616a7fc86[m
+Merge: ae6c6dd 331eac5
+Author: Brett Reinhard <brettreinhard@gmail.com>
+Date:   Mon Nov 6 07:42:26 2017 -0800
+
+    Merge pull request #479 from sakshi7896/master
+    
+    balanced parathesis code in c++
+
+[33mcommit ae6c6dd0a41a972094721401afeabceb1b047763[m
+Merge: 8a4c56d 7e19b07
+Author: Brett Reinhard <brettreinhard@gmail.com>
+Date:   Mon Nov 6 07:18:08 2017 -0800
+
+    Merge pull request #481 from smulyono/javascript/trie
+    
+    Javascript/trie #132
+
+[33mcommit 8a4c56d277ab102665ef0f6073e931e4b692b09f[m
+Merge: 8226e89 a585e6e
+Author: Brett Reinhard <brettreinhard@gmail.com>
+Date:   Mon Nov 6 07:16:45 2017 -0800
+
+    Merge pull request #482 from Qwertylex/master
+    
+    Fixed grammar and spelling
+
+[33mcommit 8226e895570e00b4fe3dc6149d79fff273abfeab[m
+Merge: 48d4768 d3f1f1f
+Author: Brett Reinhard <brettreinhard@gmail.com>
+Date:   Thu Nov 2 06:48:36 2017 -0700
+
+    Merge pull request #465 from wondermike221/master
+    
+    Added minHeap example
+
+[33mcommit d3f1f1f8de3375735c59e6760cbec06eba0ded32[m
+Author: Brett Reinhard <brettreinhard@gmail.com>
+Date:   Thu Nov 2 06:48:12 2017 -0700
+
+    Rename min_Heap.cpp to minHeap.cpp
+
+[33mcommit 79cf08ed40593f7f2fdcb6d080f66020d0fb0f87[m
+Author: Brett Reinhard <brettreinhard@gmail.com>
+Date:   Thu Nov 2 06:47:59 2017 -0700
+
+    Rename minHeap.cpp to impl_minHeap.cpp
+
+[33mcommit 873278bed25b780107ebc30bc1fdb837e2beef5a[m
+Author: Brett Reinhard <brettreinhard@gmail.com>
+Date:   Thu Nov 2 06:47:36 2017 -0700
+
+    Rename min_heap.cpp to minHeap.cpp
+
+[33mcommit 931ce6eaf2f94bf3e9e458d8486b4434a92ab46f[m
+Author: Brett Reinhard <brettreinhard@gmail.com>
+Date:   Thu Nov 2 06:46:43 2017 -0700
+
+    Rename data_structures/heap/cpp/min_heap/minHeap.cpp to data_structures/min_heap/cpp/min_Heap.cpp
+
+[33mcommit a00ca59a33760439a293d939cf5bbf63c9d0aada[m
+Author: Brett Reinhard <brettreinhard@gmail.com>
+Date:   Thu Nov 2 06:46:04 2017 -0700
+
+    Rename data_structures/heap/cpp/min_heap/minHeap.hpp to data_structures/min_heap/cpp/minHeap.hpp
+
+[33mcommit a44c84168cacf3a8a78b7f422cc4141427793b0e[m
+Author: Brett Reinhard <brettreinhard@gmail.com>
+Date:   Thu Nov 2 06:45:42 2017 -0700
+
+    Rename data_structures/heap/cpp/min_heap/main.cpp to data_structures/min_heap/cpp/min_heap.cpp
+
+[33mcommit 48d4768c470e282d835f5e797dc2447d7975653b[m
+Merge: d72bda9 cab6135
+Author: Brett Reinhard <brettreinhard@gmail.com>
+Date:   Wed Nov 1 20:26:01 2017 -0700
+
+    Merge pull request #461 from jumc/master
+    
+    D-heap.c
+
+[33mcommit cab6135929a9486b6be60ab14c7b13aa5fed0d65[m
+Author: Brett Reinhard <brettreinhard@gmail.com>
+Date:   Wed Nov 1 20:25:51 2017 -0700
+
+    Rename data_structures/d-heap/d_heap.c to data_structures/d_heap/c/d_heap.c
+
+[33mcommit d72bda9b9f67750bfedc4a1b2b3916d406649114[m
+Merge: 21eab23 f3ba087
+Author: Brett Reinhard <brettreinhard@gmail.com>
+Date:   Wed Nov 1 20:24:46 2017 -0700
+
+    Merge pull request #483 from zwernberg/patch-1
+    
+    Update binary_search.md
+
+[33mcommit f3ba087ba7bea0023f1a75d31cefc1a475c9a829[m
+Author: Zach Wernberg <zawerny@gmail.com>
+Date:   Tue Oct 31 21:35:13 2017 -0500
+
+    Update binary_search.md
+
+[33mcommit a585e6e43ffddd620fd119d6870d73713353b8ae[m
+Author: Alex <Qwertylex@gmail.com>
+Date:   Tue Oct 31 21:34:48 2017 -0400
+
+    Fixed grammar and spelling
+
+[33mcommit 7e19b07718089e98f6f63e7cc8785b1ce275eef9[m
+Author: Sanny Mulyono <smulyono@ciphercloud.com>
+Date:   Tue Oct 31 15:09:07 2017 -0700
+
+    create trie data structure for javascript #132
+
+[33mcommit 331eac5ae085e72ceaba2467b08bba8049868956[m
+Author: sakshi7896 <sakshi7896@gmail.com>
+Date:   Tue Oct 31 22:27:05 2017 +0530
+
+    balanced parathesis code in c++
+
+[33mcommit 7a24e6fb6cd08c2367d8a079b89942c41fb55310[m
+Author: Sanny Mulyono <smulyono@me.com>
+Date:   Tue Oct 31 01:33:09 2017 -0700
+
+    Revert "#132 added single linked list implementation in javascript (es6)"
+    
+    This reverts commit 1ac05779401b369413748a0a95ae0889f3e7e229.
+
+[33mcommit 1ac05779401b369413748a0a95ae0889f3e7e229[m
+Author: Sanny Mulyono <smulyono@me.com>
+Date:   Tue Oct 31 00:18:03 2017 -0700
+
+    #132 added single linked list implementation in javascript (es6)
+
+[33mcommit 21eab2300bd64d3c92bdce8d063c5f23085941a5[m
+Merge: b747ec2 83926aa
+Author: Brett Reinhard <brettreinhard@gmail.com>
+Date:   Mon Oct 30 20:22:51 2017 -0700
+
+    Merge pull request #466 from RTBear/patch-2
+    
+    Create bubble_sort.asm
+
+[33mcommit 83926aafe6a272b4a7977e876763a76b94f4ee34[m
+Author: Brett Reinhard <brettreinhard@gmail.com>
+Date:   Mon Oct 30 20:22:38 2017 -0700
+
+    Rename algorithms/bubble_sort/assembly-mips/bubble_sort.asm to algorithms/bubble_sort/assembly_mips/bubble_sort.asm
+
+[33mcommit b747ec2bca2f0926066fce7e772729de999201f8[m
+Merge: 11e9854 08ad250
+Author: Brett Reinhard <brettreinhard@gmail.com>
+Date:   Mon Oct 30 20:21:42 2017 -0700
+
+    Merge pull request #361 from abdulwd/issue#347
+    
+    Add KMP search algorithm in python.
+
+[33mcommit e4d34825450fabce4b148ff8263613ae77264c34[m
+Author: RTBear <25107434+RTBear@users.noreply.github.com>
+Date:   Mon Oct 30 17:47:04 2017 -0600
+
+    Create bubble_sort.asm
+    
+    Simple bubble sort algorithm for MIPS assembly. Not the cleanest or most efficient but it works!
+
+[33mcommit 588bb357a448d172ae3bea84886c79a7add32e95[m
+Author: Michael Hixon <michael.hixon@hotmail.com>
+Date:   Mon Oct 30 15:57:22 2017 -0600
+
+    Added minHeap example
+
+[33mcommit 9e3b38fcc777df58fd1cba93fea5a858df427466[m
+Author: Juliana <ju_jumc@hotmail.com>
+Date:   Mon Oct 30 17:00:21 2017 -0200
+
+    d-heap.c
+
+[33mcommit c7adb56e44d3357127c7b604674e215d5ecce029[m
+Author: Juliana M. Crivelli <ju_jumc@hotmail.com>
+Date:   Mon Oct 30 16:55:57 2017 -0200
+
+    Delete d-heap
+
+[33mcommit 06963a8653b6112d29a766ddcb9b7fa276b47184[m
+Author: Juliana M. Crivelli <ju_jumc@hotmail.com>
+Date:   Mon Oct 30 16:55:44 2017 -0200
+
+    Create d-heap
+
+[33mcommit 11e98540a76ecc259af8ce52ac37ea1bc5e16397[m
+Merge: 400ede1 cd29651
+Author: Brett Reinhard <brettreinhard@gmail.com>
+Date:   Sun Oct 29 20:51:11 2017 -0700
+
+    Merge pull request #434 from amanshahi/min_spanning_tree
+    
+    Min spanning tree
+
+[33mcommit cd29651d55566fa7c5d12f511a8fc6ca2e4b50f5[m
+Author: Brett Reinhard <brettreinhard@gmail.com>
+Date:   Sun Oct 29 20:50:55 2017 -0700
+
+    Rename algorithms/bucket_sort/bucket_sort.c to algorithms/bucket_sort/c/bucket_sort.c
+
+[33mcommit 8dbb30a2a68ad56fca232c84f26be6af896897ea[m
+Author: amanshahi <amanshahi2016@gmail.com>
+Date:   Sun Oct 29 18:15:39 2017 +0530
+
+    Added mst.cpp
+
+[33mcommit 6aa1ae226eb5b738a2a526cbf042a154c9d3ba43[m
+Author: amanshahi <amanshahi2016@gmail.com>
+Date:   Sun Oct 29 18:11:35 2017 +0530
+
+    Added bucket_sort.c
+
+[33mcommit f553dba49670fb7abd3bff4899daeebdf67c1af8[m
+Author: amanshahi <amanshahi2016@gmail.com>
+Date:   Sun Oct 29 18:03:47 2017 +0530
+
+    Added maxSumIncSequence.c
+
+[33mcommit 5b4cd359ab83f6c567cb819f6ca7fec7bf4dae4e[m
+Author: amanshahi <amanshahi2016@gmail.com>
+Date:   Sun Oct 29 17:43:15 2017 +0530
+
+    Added nCr.cpp
+
+[33mcommit 9b1afe131bec472058077d9597139f7b5ed587fe[m
+Author: amanshahi <amanshahi2016@gmail.com>
+Date:   Sun Oct 29 17:41:31 2017 +0530
+
+    Added file coinChange.c
+
+[33mcommit c5473c6ebab4a24d42e0cd111b7e6a6d493ec230[m
+Author: amanshahi <amanshahi2016@gmail.com>
+Date:   Sun Oct 29 17:39:09 2017 +0530
+
+    Added longestIncreasingSubsequence.c
+
+[33mcommit bff7e06650399beee97def9adf90d5ed61f08280[m
+Author: amanshahi <amanshahi2016@gmail.com>
+Date:   Sun Oct 29 17:36:46 2017 +0530
+
+    kadens.cpp added
+
+[33mcommit 08ad2503274f0fb74e5d62efb8a059f96ae9c334[m
+Author: Abdul Wadood <abdulwd97@gmail.com>
+Date:   Thu Oct 26 21:26:28 2017 +0530
+
+    Add KMP search algorithm in python.
+
+[33mcommit 400ede135c5056cdff8c61bc821c5b63a0837001[m
+Merge: 2081fb6 d7a2db1
+Author: Brett Reinhard <brettreinhard@gmail.com>
+Date:   Wed Oct 25 20:05:25 2017 -0700
+
+    Merge pull request #331 from myk7hackon/master
+    
+    Create jarvis.cpp
