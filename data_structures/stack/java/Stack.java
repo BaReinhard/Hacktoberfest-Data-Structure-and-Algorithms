@@ -17,7 +17,7 @@ public class Stack<T>{
     Node node = new Node<T>();
     node.setData(data);
     if(!isEmpty()){
-      node.setPreview(this.topNode);
+      node.setPrevious(this.topNode);
       this.topNode.setNext(node);
       this.topNode = node;
     }else{
@@ -38,7 +38,7 @@ public class Stack<T>{
       if(this.size == 1){
         this.topNode = null;
       }else{
-        Node a = this.topNode.getPreview();
+        Node a = this.topNode.getPrevious();
         a.setNext(null);
         this.topNode = a;
       }
@@ -53,7 +53,7 @@ public class Stack<T>{
       Node node = this.topNode;
       while(node != null){
         System.out.println(node.getData());
-        node = node.getPreview();
+        node = node.getPrevious();
       }
     }else{
       System.out.println("Stack is Empty!");
