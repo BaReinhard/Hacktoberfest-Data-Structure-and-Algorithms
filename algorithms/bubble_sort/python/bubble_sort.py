@@ -1,14 +1,23 @@
-def bubbleSort(a):
-    n = len(a)
-    sorted = False
-    while not sorted:
-        sorted = True
-        for i in range(0, n - 1):
-            if a[i] > a[i + 1]:
-                sorted = False
-                a[i], a[i + 1] = a[i + 1], a[i]
+num_arr = []
+arr_length = raw_input("How many numbers will be there in the array:")
 
-a = [12, 33, 1, 3, 54, 32, 78, 54, 99, 6]
-print(a)
-bubbleSort(a)
-print(a)
+print("Enter the numbers...")
+for i in range(int(arr_length)):
+  num = raw_input("num"+str(i+1)+":")
+  num_arr.append(int(num))
+  
+print("Your array is: ", num_arr)
+
+flag = 0
+for i in range(int(arr_length)):
+  for j in range(int(arr_length)-i-1):
+    if num_arr[j] > num_arr[j+1]:
+      # swap the numbers
+      num_arr[j], num_arr[j+1] = num_arr[j+1], num_arr[j]
+      flag = 1
+  if flag==0:
+    # means nothing was swapped
+    break
+
+print("Sorted Array: ", num_arr)
+      
