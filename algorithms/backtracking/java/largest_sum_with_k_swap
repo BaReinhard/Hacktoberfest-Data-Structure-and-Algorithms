@@ -1,0 +1,54 @@
+//Largest sum with k swap
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Scanner;
+
+public class LargestNumberWithKSwap {
+
+	static String max ="";
+		public static void main (String[] args) {
+			// TODO Auto-generated method stub
+			Scanner sc = new Scanner(System.in);
+			int t = sc.nextInt();
+			while(t-->0){
+			    int k = sc.nextInt();
+			    max = sc.next();
+			    maxNum(max.toCharArray(),k);
+			    System.out.println(max);
+			}
+		}
+
+		public static void maxNum(char ar[], int k){
+	        
+	        if(k==0)        // return if no swaps left
+	            return;
+	        
+	        int n = ar.length;
+	        
+	        for(int i=0; i<n-1; i++){               // consider every digit
+	            for(int j=i+1; j<n; j++){           // and compare it with all digits after it
+	            
+	                // if digit at position i is less than digit
+	                // at position j, swap it and check for maximum
+	                // number so far and recurse for remaining swaps
+	                if(ar[j]>ar[i]){
+	                    
+	                    // swap ar[i] with ar[j]
+	                    char temp = ar[i];
+	                    ar[i] = ar[j];
+	                    ar[j] = temp;
+	                    String st = new String(ar);
+	                    if(max.compareTo(st)<0){    // If current num is more than maximum so far
+	                        max = st;
+	                    }
+	                    maxNum(ar,k-1);             // recurse of the other k - 1 swaps
+	                    temp = ar[i];               // backtrack
+	                    ar[i] = ar[j];
+	                    ar[j] = temp;
+	                }
+	            }
+	        }
+	    }
+}
