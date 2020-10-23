@@ -1,0 +1,35 @@
+/*
+All DNA is composed of a series of nucleotides abbreviated as 'A', 'C', 'G', and 'T', for example: "ACGAATTCCG". When studying DNA, it is sometimes useful to identify repeated sequences within the DNA.
+
+Write a function to find all the 10-letter-long sequences (substrings) that occur more than once in a DNA molecule.
+*/
+
+class Solution {
+    public List<String> findRepeatedDnaSequences(String s) {
+        Map<String,Integer> map=new HashMap<>();
+        List<String> list=new ArrayList<>();
+        
+        
+        for(int i=0;i<=s.length()-10;i++){
+            String str=s.substring(i,i+10);
+            if(map.containsKey(str)){
+                int v=map.get(str);
+                map.put(str,++v);
+            }
+            else{
+                map.put(str,1);
+            }
+        }
+        
+        
+        for(Map.Entry<String,Integer> entry:map.entrySet()){
+            if(entry.getValue()>1){
+                list.add(entry.getKey());
+            }
+        }
+        
+        return list;
+         
+    }
+}
+
