@@ -7,10 +7,10 @@ int binarySearch(int arr[], int l, int r, int key) {
        // If the element is present at the middle
        if (arr[mid] == key)  return mid;
 
-       // If element is smaller than mid, then it can only be present in left subarray
+       // If element is smaller than mid, then it is present in left subarray
        else if (arr[mid] > key) return binarySearch(arr, l, mid-1, key);
 
-       // Else the element can only be present in right subarray
+       // Else the element is present in right subarray
        return binarySearch(arr, mid+1, r, key);
   }
   // When element is not present in array
