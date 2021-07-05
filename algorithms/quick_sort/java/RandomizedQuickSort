@@ -1,0 +1,70 @@
+public class RandomizedQuickSort {
+	
+	public static void main(String[] args) {
+		int n = 100;
+		int[] myArray = new int[n];
+		myArray = CreateArray(myArray);
+		printArray(myArray);
+		int[] sortedArray = new int[n];
+		long startTime = System.currentTimeMillis();
+		sortedArray = QuickSort(myArray, 0, n - 1);
+		long endTime = System.currentTimeMillis();
+		long totalTime = endTime - startTime;
+		printArray(sortedArray);
+		System.out.print("Running Time: " + totalTime + "ms\n");
+	}
+	
+	public static int[] QuickSort(int[]A, int p, int r) {
+		if (p < r) {
+			int q = RandomizedPartition(A, p, r);
+			QuickSort(A, p, q - 1);
+			QuickSort(A, q + 1, r); 
+		}
+		return A;
+	}
+	
+	public static int RandomizedPartition(int[] A, int p, int r) {
+		Random random = new Random();
+		int i = random.nextInt((r - p) + 1) + p;
+		swap(A, i, r);
+		return Partition(A, p, r);
+	}
+	
+	public static int Partition(int[] A, int p, int r) {
+		int x = A[r];
+		int i = p - 1;
+		for (int j = p; j < r; j++) {
+			if (A[j] <= x) {
+				i++;
+				swap(A, i, j);
+			}
+		}
+		i++;
+		swap(A, i, r);
+		return i;
+	}
+	
+	public static void swap(int[] A, int x, int y) {
+		int temp = A[x];
+		A[x] = A[y];
+		A[y] = temp;
+	}
+	
+	public static int[] CreateArray(int[] A) {
+		Random random = new Random();
+		for (int i = 0; i < A.length; i++) {
+		  A[i] = random.nextInt(100);
+		}
+		return A;
+	}
+	
+	public static void printArray(int[] A) {
+		int i = 0;
+		while(i < A.length) {
+			System.out.print(A[i] + " ");
+			i++;
+		}
+		System.out.print('\n');
+	}
+	
+}
