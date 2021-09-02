@@ -36,4 +36,4 @@ ex: /algorithms/bubble_sort/cpp/bubble_sort.cpp
 3. Make Pull Request to master
 
 #### Credits
-Logo created with: http://logomakr.com
+Logo created with: ![Logomkr](http://logomakr.com)
