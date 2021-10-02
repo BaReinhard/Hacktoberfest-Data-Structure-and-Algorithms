@@ -2,7 +2,7 @@ def merge_sort(li):
     # recursively split the lists
     if len(li) <= 1:
         return li
-    middle = len(li) / 2
+    middle = len(li) // 2
     left = li[:middle]
     right = li[middle:]
     return merge(merge_sort(left), merge_sort(right))
@@ -22,3 +22,8 @@ def merge(left, right):
         else:
             result.append(right.pop(0))
     return result
+
+
+if __name__ == '__main__':
+    lst = [3, 2, 5, 23, 42, 1]
+    print(merge_sort(lst))
