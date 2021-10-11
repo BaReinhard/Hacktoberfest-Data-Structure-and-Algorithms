@@ -1,0 +1,15 @@
+const insertionSort = (arr, i = arr.length) => {
+    if (i <= 1) return; // guard clause 
+	insertionSort(arr, i - 1);  
+    let key = arr[i - 1];
+    let j = i - 2;
+    while(j >= 0 && arr[j] > key){
+      arr[j + 1] = arr[j];
+      j--;
+    } 
+    arr[j + 1] = key; 
+	return arr; 
+} 
+
+const unsorted = [3, 2, 1, 4]; 
+const sorted = insertionSort(unsorted); // expected 1 2 3 4 
