@@ -1,0 +1,41 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+/* You are given three positive integers a, b and target. Consider an operation where you take either a or b and update one of the bits to 1 or to 0.
+Calculate the minimum number of operations required to make a | b = target. */
+
+
+int solve(int a, int b, int target) {
+    int cnt=0;
+    while(a>0 || b>0 || target>0){
+        int ba=(a&1);
+        int bb=(b&1);
+        int bt=(target&1);
+        if(bt==0){
+            cnt+=(ba==1);
+            cnt+=(bb==1);
+        }else{
+            if(ba==0 && bb==0){
+                cnt++;
+            }
+        }
+        a=a/2;
+        b=b/2;
+        target=target/2;
+    }
+    return cnt;
+    
+}
+
+int main(void)
+{
+    int a=2;
+    int b=4;
+    int target=8;
+    
+    int result=solve(a,b,target);
+    //expected result:- 3 operations.
+    
+    cout<<result<<endl;
+    return 0;
+}
