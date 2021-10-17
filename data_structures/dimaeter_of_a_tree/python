@@ -9,7 +9,7 @@ class TreeNode:
 
 # Function to compute the height of tree
 def treeHeight(treeNode):
-	if node is None:
+	if treeNode is None:
 		return 0
 	return 1 + max(treeHeight(treeNode.left), treeHeight(treeNode.right))
 
