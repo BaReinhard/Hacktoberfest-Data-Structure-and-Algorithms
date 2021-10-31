@@ -1,6 +1,8 @@
 # Hacktoberfest-Data-Structure-and-Algorithms
 A repository containing data structures and algorithms, regardless of language.
 
+No longer active
+
 ***Not Affiliated with Digital Ocean or Hacktoberfest***
 
 ![Hacktoberfest](https://pbs.twimg.com/media/Dn4njsBXkAEQWZs.jpg)
