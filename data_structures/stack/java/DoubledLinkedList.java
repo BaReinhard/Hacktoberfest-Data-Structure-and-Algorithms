@@ -1,19 +1,19 @@
 import java.util.*;
 
-public class Node<T>{
+public class DoubledLinkedList<T>{
   private T data;
   private Node nextNode;
   private Node previewNode;
   private int index;
 
-  public Node(T data){
+  public DoubledLinkedList(T data){
     this.data = data;
     this.nextNode = null;
     this.previewNode = null;
     this.index = 0;
   }
 
-  public Node(){
+  public DoubledLinkedList(){
     this.data = null;
     this.nextNode = null;
     this.previewNode = null;

@@ -1,6 +1,6 @@
 public class QuickSort{
 	static void quickSort(int[] arr,int start, int end){
-		if (start < end){
+		if (start < end && arr != null && arr.length > 1 && start >= 0 && end < arr.length){
 			int pivot_pos = partition(arr,start,end);
 			quickSort (arr,start, pivot_pos-1);
 			quickSort (arr,pivot_pos+1, end);
