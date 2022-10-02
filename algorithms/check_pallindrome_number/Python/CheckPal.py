@@ -24,5 +24,5 @@ i=int(input("Enter the number you want to check:"))
 r=ispal(i)
 e=ispal1(i)
 
-print(i, "is a palindrome:", r ," using first approach.")
-print(i,"is a palindrom:" , e ," using second approach.")
+print(i, "is a palindrome:", r ," using the first approach.")
+print(i,"is a palindrom:" , e ," using the second approach.")
