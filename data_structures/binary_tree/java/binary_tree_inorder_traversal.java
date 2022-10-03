@@ -9,7 +9,7 @@ class Node {
         right = null;
     }
 }
-class binary_tree_inorder_travesal {
+public class binary_tree_inorder_traversal {
     static ArrayList < Integer > inOrderTrav(Node curr) {
         ArrayList < Integer > inOrder = new ArrayList < > ();
         Stack < Node > s = new Stack < > ();
