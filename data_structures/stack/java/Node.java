@@ -3,20 +3,20 @@ import java.util.*;
 public class Node<T>{
   private T data;
   private Node nextNode;
-  private Node previewNode;
+  private Node previousNode;
   private int index;
 
   public Node(T data){
     this.data = data;
     this.nextNode = null;
-    this.previewNode = null;
+    this.previousNode = null;
     this.index = 0;
   }
 
   public Node(){
     this.data = null;
     this.nextNode = null;
-    this.previewNode = null;
+    this.previousNode = null;
     this.index = 0;
   }
 
@@ -40,11 +40,11 @@ public class Node<T>{
       return this.nextNode;
   }
 
-  public void setPreview(Node node){
-    this.previewNode = node;
+  public void setPrevious(Node node){
+    this.previousNode = node;
   }
 
-  public Node getPreview(){
-      return this.previewNode;
+  public Node getPrevious(){
+      return this.previousNode;
   }
 }
